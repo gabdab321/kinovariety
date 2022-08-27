@@ -1,0 +1,22 @@
+@import "./src/styles/variables";
+
+.list {
+    width: 80%;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+
+    @media screen and (max-width: $xl){
+        & {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    @media screen and (max-width: $xl){
+        & {
+            grid-template-columns: 1fr;
+        }
+    }
+}

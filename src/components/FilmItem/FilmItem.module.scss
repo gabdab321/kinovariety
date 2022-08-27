@@ -1,0 +1,46 @@
+@import "./src/styles/variables";
+
+.item {
+    width: 70%;
+    height: 100%;
+    flex-direction: column;
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    background-color: $secondaryColor;
+    padding: 40px;
+
+    &__image_container {
+        width: 200px;
+        height: 300px;
+        display: flex;
+    }
+
+    &__image {
+        border-radius: 24px;
+        width: 100%;
+        height: auto;
+    }
+
+    &__title {
+        color: $textColor;
+        font-size: 20px;
+        font-weight: bolder;
+        margin-top: 15px;
+        text-align: center;
+    }
+
+    @media screen and (max-width: $xl){
+        & {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    @media screen and (max-width: $xl){
+        & {
+            grid-template-columns: 1fr;
+        }
+    }
+}
