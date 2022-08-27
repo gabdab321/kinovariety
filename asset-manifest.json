@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/kinovariety/static/css/main.7410c6e8.css",
-    "main.js": "/kinovariety/static/js/main.51f0835c.js",
+    "main.js": "/kinovariety/static/js/main.90671549.js",
     "index.html": "/kinovariety/index.html",
     "main.7410c6e8.css.map": "/kinovariety/static/css/main.7410c6e8.css.map",
-    "main.51f0835c.js.map": "/kinovariety/static/js/main.51f0835c.js.map"
+    "main.90671549.js.map": "/kinovariety/static/js/main.90671549.js.map"
   },
   "entrypoints": [
     "static/css/main.7410c6e8.css",
-    "static/js/main.51f0835c.js"
+    "static/js/main.90671549.js"
   ]
 }
