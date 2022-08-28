@@ -11,6 +11,12 @@
     justify-self: center;
     background-color: $secondaryColor;
     padding: 40px;
+    transition: 0.4s all;
+
+    &__hovered {
+        background-color: $activeColor;
+        transform: scale(1.03);
+    }
 
     &__image_container {
         width: 200px;

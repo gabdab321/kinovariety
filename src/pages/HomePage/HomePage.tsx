@@ -1,14 +1,19 @@
 import React from 'react';
-import HorizontalList from "../../components/List/List";
 import {filmAPI} from "../../services/filmAPI";
-import {IFilter} from "../../models/IFilter";
+import Loader from "../../components/UI/Loader/Loader";
+import List from "../../components/List/List";
+import ErrorWarning from "../../components/UI/ErrorWarning/ErrorWarning";
+import {useAppSelector} from "../../hooks/redux";
 
 const HomePage = () => {
-    const {data: newFilms} = filmAPI.useFetchFilmsByFilterQuery({page: 1} as IFilter)
+    const {currentCategory} = useAppSelector(state => state.category)
+    const {data: newFilms, isLoading, isError} = filmAPI.useFetchByCategoryQuery(currentCategory)
 
     return (
         <div>
-            {newFilms && <HorizontalList films={newFilms.items}/>}
+            {isError ? <ErrorWarning/> : ""}
+            {isLoading && <Loader style={{margin: "0 auto"}}/>}
+            {newFilms && <List films={newFilms.items}/>}
         </div>
     );
 };

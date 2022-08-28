@@ -25,6 +25,12 @@ export const filmAPI = createApi({
             })
         }),
 
+        fetchByCategory: build.query<IResponse, string>({
+            query: (category) => ({
+                url: `/api/v2.2/films?type=${category}`
+            })
+        }),
+
         fetchFilmsByFilter: build.query<IResponse, IFilter>({
             query: (filter) => ({
                 url: `/api/v2.2/films?type=FILM&order=${filter.order || "RATING"}&ratingFrom=${filter.ratingFrom || 0}&ratingTo=${filter.ratingTo || 10}&yearFrom=${filter.yearFrom || 1960}&yearTo=${filter.yearTo || getCurrentYear()}&page=${filter.page || 1}`
