@@ -15,10 +15,10 @@ const FilmItem = ({film}: FilmItemProps) => {
 
     return (
         <article ref={itemRef} className={classes}>
+            <p hidden={!isHover} className={cl.item__title}>{film.nameRu === null ? film.nameOriginal : film.nameRu}</p>
             <div className={cl.item__image_container}>
                 <img className={cl.item__image} src={film.posterUrlPreview} alt="" />
             </div>
-            <p className={cl.item__title}>{film.nameRu}</p>
         </article>
     );
 };

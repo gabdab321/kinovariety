@@ -5,8 +5,8 @@
     margin: 20px auto;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    grid-gap: 20px;
+    grid-auto-rows: 500px;
+    grid-gap: 80px;
 
     @media screen and (max-width: $xl){
         & {
@@ -14,7 +14,7 @@
         }
     }
 
-    @media screen and (max-width: $xl){
+    @media screen and (max-width: $md){
         & {
             grid-template-columns: 1fr;
         }

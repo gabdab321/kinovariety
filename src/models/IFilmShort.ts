@@ -9,6 +9,7 @@ interface Country {
 export interface IFilmShort {
     kinopoiskId: number,
     nameRu: string,
+    nameOriginal: string,
     posterUrl: string,
     posterUrlPreview: string,
     ratingImdb: number,

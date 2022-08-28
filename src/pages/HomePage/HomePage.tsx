@@ -10,9 +10,9 @@ const HomePage = () => {
     const {data: newFilms, isLoading, isError} = filmAPI.useFetchByCategoryQuery(currentCategory)
 
     return (
-        <div>
+        <div className="HomePage">
             {isError ? <ErrorWarning/> : ""}
-            {isLoading && <Loader style={{margin: "0 auto"}}/>}
+            {isLoading && <Loader style={{margin: "40px auto"}}/>}
             {newFilms && <List films={newFilms.items}/>}
         </div>
     );
