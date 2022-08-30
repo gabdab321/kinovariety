@@ -3,6 +3,7 @@ import cl from "./Navbar.module.scss"
 import {Categories} from "../../../utils/categories";
 import {useAppDispatch, useAppSelector} from "../../../hooks/redux";
 import {setCategory} from "../../../store/reducers/categorySlice";
+import {setCurrentFilms} from "../../../store/reducers/currentFilmsSlice";
 
 const Navbar = () => {
     const dispatch = useAppDispatch()
@@ -15,6 +16,7 @@ const Navbar = () => {
 
         e.preventDefault()
         dispatch(setCategory(e.target.dataset.category as string))
+        dispatch(setCurrentFilms([]))
     }
 
     interface Anchor {

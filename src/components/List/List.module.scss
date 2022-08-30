@@ -8,6 +8,12 @@
     grid-auto-rows: 500px;
     grid-gap: 80px;
 
+    @media screen and (min-width: 2000px){
+        & {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+    }
+
     @media screen and (max-width: $xl){
         & {
             grid-template-columns: 1fr 1fr;
@@ -17,6 +23,13 @@
     @media screen and (max-width: $md){
         & {
             grid-template-columns: 1fr;
+        }
+    }
+
+    @media screen and (max-width: 450px) {
+        & {
+            width: 90%;
+            grid-gap: 30px;
         }
     }
 }
