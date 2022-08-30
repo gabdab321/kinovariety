@@ -25,9 +25,9 @@ export const filmAPI = createApi({
             })
         }),
 
-        fetchByCategory: build.query<IResponse, string>({
-            query: (category) => ({
-                url: `/api/v2.2/films?type=${category}`
+        fetchByCategory: build.query<IResponse, { category: string, page: number }>({
+            query: (params) => ({
+                url: `/api/v2.2/films?type=${params.category}&page=${params.page}`
             })
         }),
 

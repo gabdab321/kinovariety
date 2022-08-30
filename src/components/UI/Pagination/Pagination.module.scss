@@ -1,0 +1,63 @@
+@import "./src/styles/variables";
+
+.container {
+    width: 80%;
+    height: 50px;
+    background-color: $secondaryColor;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 24px;
+
+    &__page {
+        font-size: 24px;
+        color: $textColor;
+        font-weight: normal;
+        cursor: pointer;
+    }
+
+    &__active {
+        text-decoration: none;
+        color: $activeColor;
+        font-weight: bold;
+    }
+
+    &__controller {
+        text-decoration: none;
+        font-size: 42px;
+        color: white;
+        cursor: pointer;
+
+        &:hover{
+            color: white;
+        }
+    }
+
+    &__break {
+        color: white;
+        font-size: 26px;
+        cursor: pointer;
+    }
+
+    @media screen and (max-width: $md){
+        & {
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        &__page {
+            font-size: 16px;
+        }
+
+        &__controller {
+            font-size: 34px;
+        }
+
+        &__break {
+            font-size: 20px;
+        }
+    }
+}
