@@ -1,14 +1,9 @@
-interface Genre {
-    genre: string
-}
-
-interface Country {
-    country: string
-}
-
 export interface IFilmFull {
     kinopoiskId: number,
     nameRu: string,
+    nameOriginal: string,
+    nameEn: string,
+    slogan: string,
     posterUrl: string,
     posterUrlPreview: string,
     coverUrl: string,
@@ -18,8 +13,8 @@ export interface IFilmFull {
     description: string,
     shortDescription: string,
     ratingAgeLimits: string,
-    countries: Country[],
-    genres: Genre[],
+    countries: { country: string }[],
+    genres: { genre: string }[],
     serial: boolean,
     completed: boolean
 }

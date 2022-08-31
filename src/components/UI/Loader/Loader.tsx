@@ -2,7 +2,7 @@ import React from 'react';
 import cl from "./Loader.module.scss"
 
 interface LoaderProps {
-    style: Object
+    style? : Object
 }
 
 

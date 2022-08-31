@@ -1,11 +1,3 @@
-interface Genre {
-    genre: string
-}
-
-interface Country {
-    country: string
-}
-
 export interface IFilmShort {
     kinopoiskId: number,
     nameRu: string,
@@ -15,8 +7,8 @@ export interface IFilmShort {
     ratingImdb: number,
     year: number,
     type: string,
-    countries: Country[],
-    genres: Genre[],
+    countries: Array<{country: string}>,
+    genres: Array<{genre: string}>,
     description?: string,
     filmLength: string
 }

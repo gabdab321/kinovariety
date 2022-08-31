@@ -19,7 +19,7 @@ export const filmAPI = createApi({
     }),
 
     endpoints: build => ({
-        fetchById: build.query<IFilmFull, number>({
+        fetchById: build.query<IFilmFull, number | string>({
             query: (id) => ({
                 url: `/api/v2.2/films/${id}`
             })
