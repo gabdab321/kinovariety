@@ -2,24 +2,92 @@
 
 .item {
     min-height: 100vh;
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
     background-color: $secondaryColor;
     color: $textColor;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
 
     &__title {
-
+        color: $textColor;
+        font-size: 50px;
+        font-weight: bold;
     }
 
     &__subtitle {
+        margin-top: 5px;
+        font-size: 20px;
         color: #818181;
     }
 
-    &__posterContainer {
-
+    &__info_container {
+        display: flex;
+        margin-top: 20px;
     }
 
     &__poster {
+        width: 400px;
+        height: 600px;
+        border-radius: 10px;
+    }
 
+    &__film_about {
+        padding: 0 25px;
+        list-style: none;
+    }
+
+    &__about_item {
+        font-size: 18px;
+        margin-top: 5px;
+
+        & span {
+            color: $activeColor;
+        }
+    }
+
+    &__description_title {
+        margin-top: 20px;
+        text-align: center;
+        font-size: 28px;
+        color: $textColor;
+    }
+
+    &__description {
+        margin-top: 8px;
+    }
+
+    @media screen and (max-width: $lg){
+        &__info_container {
+            flex-direction: column;
+        }
+
+        &__film_about {
+            padding: 10px 0;
+        }
+    }
+
+    @media screen and (max-width: $sm) {
+        & {
+            width: 100%;
+        }
+    }
+
+    @media screen and (max-width: 450px) {
+        & {
+            align-items: center;
+        }
+
+        &__poster {
+            align-self: center;
+            width: 300px;
+            height: 400px;
+        }
+
+        &__description_title {
+            align-self: start;
+            text-align: start;
+        }
     }
 }
