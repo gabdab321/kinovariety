@@ -3,6 +3,7 @@ export interface IFilmFull {
     nameRu: string,
     nameOriginal: string,
     nameEn: string,
+    type: string[],
     slogan: string,
     posterUrl: string,
     posterUrlPreview: string,
