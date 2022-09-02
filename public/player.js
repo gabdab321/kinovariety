@@ -9,12 +9,12 @@ function kinobd_key(event) {
                 document.querySelector('[data-event="' + (parseInt(a.dataset.event) - 1) + '"]:not([style*="display:none"]):not([style*="display: none"]') :
                 document.querySelector('[data-event="' + (parseInt(a.dataset.event) + 1) + '"]:not([style*="display:none"]):not([style*="display: none"]');
             if (!u && key === 'up') {
-                var p = document.querySelector('[data-event="prev"]:not([style*="display:none"]):not([style*="display: none"]');
+                var p = document.querySelector('[data-event="prev"]:not([style*="display:none"]):not([style*="display: none"])');
                 if (p && typeof p.onclick === 'function') {
                     p.onclick.apply(p);
                 }
             } else if (!u && key === 'down') {
-                var n = document.querySelector('[data-event="next"]:not([style*="display:none"]):not([style*="display: none"]');
+                var n = document.querySelector('[data-event="next"]:not([style*="display:none"]):not([style*="display: none"])');
                 if (n && typeof n.onclick === 'function') {
                     n.onclick.apply(n);
                 }
@@ -25,7 +25,7 @@ function kinobd_key(event) {
     } else if (key && key === 'fullscreen') {
         kb_fullscreen();
     } else {
-        var e = document.querySelectorAll('[data-event]:not([style*="display:none"]):not([style*="display: none"]');
+        var e = document.querySelectorAll('[data-event]:not([style*="display:none"]):not([style*="display: none"])');
         if (e && e.length) {
             for (var i = 0; i < e.length; i++) {
                 if (key && e[i].dataset.event === key && typeof e[i].onclick === 'function') {

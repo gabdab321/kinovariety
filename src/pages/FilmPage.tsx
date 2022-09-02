@@ -20,7 +20,6 @@ const FilmPage = () => {
                 :
                 <>
                     <FilmPageItem film={film}/>
-                    <FilmPlayer id={film.kinopoiskId}/>
                 </>
             }
         </div>

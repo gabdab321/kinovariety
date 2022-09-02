@@ -36,6 +36,8 @@
     &__film_about {
         padding: 0 25px;
         list-style: none;
+        display: flex;
+        flex-direction: column;
     }
 
     &__about_item {
