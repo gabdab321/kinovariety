@@ -9,8 +9,6 @@ interface FilmPageItemProps {
 }
 
 const FilmPageItem = ({film}: FilmPageItemProps) => {
-    console.log(film)
-
     return (
         <div className={cl.item}>
             <h1 className={cl.item__title}>{film.nameRu}</h1>

@@ -4,6 +4,7 @@ import {filmAPI} from "../services/filmAPI";
 import Loader from "../components/UI/Loader/Loader";
 import ErrorWarning from "../components/UI/ErrorWarning/ErrorWarning";
 import FilmPageItem from "../components/FilmPageItem/FilmPageItem";
+import FilmPlayer from "../components/FilmPlayer/FilmPlayer";
 
 const FilmPage = () => {
     const {id} = useParams()
@@ -13,7 +14,15 @@ const FilmPage = () => {
         <div>
             {isError && <ErrorWarning />}
             {isLoading && <Loader />}
-            {film === undefined ? "" : <FilmPageItem film={film}/>}
+            {film === undefined
+                ?
+                ""
+                :
+                <>
+                    <FilmPageItem film={film}/>
+                    <FilmPlayer id={film.kinopoiskId}/>
+                </>
+            }
         </div>
     );
 };
