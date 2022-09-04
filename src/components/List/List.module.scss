@@ -2,34 +2,72 @@
 
 .list {
     width: 80%;
-    margin: 20px auto;
+    border-radius: 10px;
+    background-color: $secondaryColor;
+    padding: 20px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-auto-rows: 500px;
-    grid-gap: 80px;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 20px;
+    margin-top: 50px;
 
-    @media screen and (min-width: 2000px){
+    &__container {
+        grid-column: 1/6;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__title {
+        color: $textColor;
+    }
+
+    &__link {
+        text-decoration: none;
+        border-radius: 10px;
+        font-weight: bold;
+        color: $textColor;
+        background-color: $activeColor;
+        padding: 10px 20px;
+    }
+
+    @media screen and (max-width: 1300px){
         & {
-            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        &__container {
+            grid-column: 1/4;
         }
     }
 
-    @media screen and (max-width: $xl){
+    @media screen and (max-width: 800px){
         & {
             grid-template-columns: 1fr 1fr;
         }
-    }
 
-    @media screen and (max-width: $md){
-        & {
-            grid-template-columns: 1fr;
+        &__container {
+            grid-column: 1/3;
         }
     }
 
-    @media screen and (max-width: 450px) {
+    @media screen and (max-width: 550px){
         & {
-            width: 90%;
-            grid-gap: 30px;
+            grid-template-columns: 1fr;
+        }
+
+        &__container {
+            grid-column: 1/2;
+        }
+    }
+
+    @media screen and (max-width: 400px){
+        &__container {
+            grid-column: 1/2;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__link {
+            margin-top: 13px;
         }
     }
 }

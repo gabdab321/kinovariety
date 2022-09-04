@@ -1,5 +1,5 @@
 import {IRoute} from "../models/IRoute";
-import HomePage from "../pages/HomePage";
+import HomePage from "../pages/HomePage/HomePage";
 import {Navigate} from "react-router-dom";
 import FilmPage from "../pages/FilmPage";
 
