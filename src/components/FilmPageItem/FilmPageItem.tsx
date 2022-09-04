@@ -10,24 +10,24 @@ interface FilmPageItemProps {
 }
 
 const FilmPageItem = ({film}: FilmPageItemProps) => {
-    console.log(film.type)
+    console.log(film)
 
     return (
         <div className={cl.item}>
-            <h1 className={cl.item__title}>{film.nameRu || "Немає назви"}</h1>
-            <h3 className={cl.item__subtitle}>{film.nameOriginal || film.nameEn || "Немає назви"}</h3>
+            <h1 className={cl.item__title}>{film.nameRu || "-"}</h1>
+            <h3 className={cl.item__subtitle}>{film.nameOriginal || film.nameEn || "-"}</h3>
 
             <div className={cl.item__info_container}>
                 <img className={cl.item__poster} src={film.posterUrlPreview} alt=""/>
 
                 <ul className={cl.item__film_about}>
-                    <li className={cl.item__about_item}><span>Рейтинг: </span> {film.ratingImdb || "Немає інформації про рейтинг"}</li>
-                    <li className={cl.item__about_item}><span>Слоган: </span> {film.slogan ? `«${film.slogan}»` : "Немає слогану"}</li>
-                    <li className={cl.item__about_item}><span>Рік виходу: </span> {film.year || "Немає інформації"}</li>
-                    <li className={cl.item__about_item}><span>Країни: </span> {film.countries ? "Немає інформації" : transformArrayToStr("country", film.countries)}</li>
-                    <li className={cl.item__about_item}><span>Жанри: </span> {film.genres ? "Немає інформації" : transformArrayToStr("genre", film.genres)}</li>
-                    <li className={cl.item__about_item}><span>Вікові обмеження: </span> {film.ratingAgeLimits ?  getAgeLimit(film.ratingAgeLimits) : "Немає інформації"}</li>
-                    <li className={cl.item__about_item}><span>Тривалість фільму: </span> {film.filmLength ? `${film.filmLength} хвилин` : "Немає інформації"}</li>
+                    <li className={cl.item__about_item}><span>Рейтинг: </span> {film.ratingImdb || "-"}</li>
+                    <li className={cl.item__about_item}><span>Слоган: </span> {film.slogan ? `«${film.slogan}»` : "-"}</li>
+                    <li className={cl.item__about_item}><span>Рік виходу: </span> {film.year || "-"}</li>
+                    <li className={cl.item__about_item}><span>Країни: </span> {film.countries ? transformArrayToStr("country", film.countries) : "-"}</li>
+                    <li className={cl.item__about_item}><span>Жанри: </span> {film.genres ? transformArrayToStr("genre", film.genres) : "-"}</li>
+                    <li className={cl.item__about_item}><span>Вікові обмеження: </span> {film.ratingAgeLimits ?  getAgeLimit(film.ratingAgeLimits) : "-"}</li>
+                    <li className={cl.item__about_item}><span>Тривалість фільму: </span> {film.filmLength ? `${film.filmLength} хвилин` : "-"}</li>
                 </ul>
             </div>
 

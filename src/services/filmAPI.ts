@@ -25,9 +25,21 @@ export const filmAPI = createApi({
             })
         }),
 
-        fetchByCategory: build.query<IResponse, { category: string, page: number }>({
-            query: (params) => ({
-                url: `/api/v2.2/films?type=${params.category}&page=${params.page}`
+        fetchFilms: build.query<IResponse, number>({
+            query: (page= 1) => ({
+                url: `/api/v2.2/films?type=FILM&page=${page}&order=NUM_VOTE`
+            })
+        }),
+
+        fetchSeries: build.query<IResponse, number>({
+            query: (page= 1) => ({
+                url: `/api/v2.2/films?type=TV_SERIES&page=${page}&order=NUM_VOTE`
+            })
+        }),
+
+        fetchShows: build.query<IResponse, number>({
+            query: (page = 1) => ({
+                url: `/api/v2.2/films?type=TV_SHOW&page=${page}&order=NUM_VOTE`
             })
         }),
 
