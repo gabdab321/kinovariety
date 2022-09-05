@@ -27,11 +27,18 @@ const FilmPageItem = ({film}: FilmPageItemProps) => {
                     <li className={cl.item__about_item}><span>Країни: </span> {film.countries ? transformArrayToStr("country", film.countries) : "-"}</li>
                     <li className={cl.item__about_item}><span>Жанри: </span> {film.genres ? transformArrayToStr("genre", film.genres) : "-"}</li>
                     <li className={cl.item__about_item}><span>Вікові обмеження: </span> {film.ratingAgeLimits ?  getAgeLimit(film.ratingAgeLimits) : "-"}</li>
-                    <li className={cl.item__about_item}><span>Тривалість фільму: </span> {film.filmLength ? `${film.filmLength} хвилин` : "-"}</li>
+
+                    {film.serial
+                        ?
+                        ""
+                        :
+                        <li className={cl.item__about_item}><span>Тривалість фільму: </span> {film.filmLength ? `${film.filmLength} хвилин` : "-"}</li>
+                    }
+
                 </ul>
             </div>
 
-            <h2 className={cl.item__description_title}>Опис фільму</h2>
+            <h2 className={cl.item__description_title}>Опис {film.serial ? "серіалу" : "фільму"}</h2>
             <p className={cl.item__description}>{film.description  || "Немає опису"}</p>
 
             <FilmPlayer id={film.kinopoiskId}/>

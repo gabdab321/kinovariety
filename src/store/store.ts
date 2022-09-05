@@ -1,8 +1,10 @@
 import {configureStore} from "@reduxjs/toolkit";
 import {filmAPI} from "../services/filmAPI";
+import {searchQueryReducer} from "./reducers/searchQuerySlice";
 
 const reducer = {
     [filmAPI.reducerPath]: filmAPI.reducer,
+    searchQuery: searchQueryReducer
 }
 
 export const store = configureStore({
