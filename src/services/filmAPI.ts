@@ -4,6 +4,7 @@ import {IResponse} from "../models/IResponse";
 import {IFilter} from "../models/IFilter";
 import {getCurrentYear} from "../utils/getCurrentYear";
 import {API_TOKEN} from "../consts";
+import {IResponseSeasons} from "../models/ISeasons";
 
 export const filmAPI = createApi({
     reducerPath: "filmAPI",
@@ -58,6 +59,12 @@ export const filmAPI = createApi({
         fetchTVShowsByFilter: build.query<IResponse, IFilter>({
             query: (filter) => ({
                 url: `/api/v2.2/films?type=TV_SHOW&order=${filter.order || "RATING"}&ratingFrom=${filter.ratingFrom || 0}&ratingTo=${filter.ratingTo || 10}&yearFrom=${filter.yearFrom || 1960}&yearTo=${filter.yearTo || getCurrentYear()}&page=${filter.page || 1}`
+            })
+        }),
+
+        fetchSeasons: build.query<IResponseSeasons, number>({
+            query: (id) => ({
+                url: `/api/v2.2/films/${id}/seasons`
             })
         })
     })

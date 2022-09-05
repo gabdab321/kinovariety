@@ -1,16 +1,17 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {IFilmFull} from "../../models/IFilmFull";
 import cl from "./FilmPageItem.module.scss"
 import {transformArrayToStr} from "../../utils/transformArrayToStr";
 import {getAgeLimit} from "../../utils/getAgeLimit";
 import FilmPlayer from "../FilmPlayer/FilmPlayer";
+import {filmAPI} from "../../services/filmAPI";
 
 interface FilmPageItemProps {
     film: IFilmFull
 }
 
 const FilmPageItem = ({film}: FilmPageItemProps) => {
-    console.log(film)
+    const {data} = filmAPI.useFetchSeasonsQuery(film.kinopoiskId)
 
     return (
         <div className={cl.item}>
@@ -30,7 +31,7 @@ const FilmPageItem = ({film}: FilmPageItemProps) => {
 
                     {film.serial
                         ?
-                        ""
+                        <li className={cl.item__about_item}><span>Тривалість серіалу: </span> {data ? `${data.total} сезонів` : "-"}</li>
                         :
                         <li className={cl.item__about_item}><span>Тривалість фільму: </span> {film.filmLength ? `${film.filmLength} хвилин` : "-"}</li>
                     }
