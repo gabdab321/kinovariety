@@ -5,6 +5,7 @@ import {IFilter} from "../models/IFilter";
 import {getCurrentYear} from "../utils/getCurrentYear";
 import {API_TOKEN} from "../consts";
 import {IResponseSeasons} from "../models/ISeasons";
+import {IResponseSearch} from "../models/IResponseSearch";
 
 export const filmAPI = createApi({
     reducerPath: "filmAPI",
@@ -65,6 +66,12 @@ export const filmAPI = createApi({
         fetchSeasons: build.query<IResponseSeasons, number>({
             query: (id) => ({
                 url: `/api/v2.2/films/${id}/seasons`
+            })
+        }),
+
+        searchFilms: build.query<IResponseSearch, string>({
+            query: (query) => ({
+                url: `/api/v2.1/films/search-by-keyword?keyword=${query}&page=1`
             })
         })
     })

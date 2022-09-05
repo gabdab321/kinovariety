@@ -1,0 +1,28 @@
+import React from 'react';
+import {IFilmSearch} from "../../../models/IFilmSearch";
+import cl from "./SearchItem.module.scss"
+import {humanReadableCategory} from "../../../utils/humanReadableCategory";
+import {Link} from "react-router-dom";
+
+interface SearchItemProps {
+    film: IFilmSearch
+}
+
+const SearchItem = ({film}: SearchItemProps) => {
+    const shortInformation = `${film.year}, ${humanReadableCategory(film.type)}`
+
+    return (
+        <Link to={`/film/${film.filmId}`} className={cl.item}>
+            <div className={cl.item__image_container}>
+                <img className={cl.item__image} src={film.posterUrlPreview} alt=""/>
+            </div>
+
+            <div className={cl.item__text_container}>
+                <p className={cl.item__title}>{film.nameRu}</p>
+                <p className={cl.item__short}>{shortInformation}</p>
+            </div>
+        </Link>
+    );
+};
+
+export default SearchItem;

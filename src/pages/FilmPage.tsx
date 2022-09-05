@@ -9,7 +9,6 @@ const FilmPage = () => {
     const {id} = useParams()
     const {data: film, isLoading, isError} = filmAPI.useFetchByIdQuery(id as string)
 
-
     return (
         <div>
             {isError && <ErrorWarning />}

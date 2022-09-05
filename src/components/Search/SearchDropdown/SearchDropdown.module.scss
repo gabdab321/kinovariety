@@ -1,0 +1,48 @@
+@import "../../../styles/variables";
+
+.dropdown {
+    border-radius: 10px;
+    box-shadow: rgba(234, 26, 38, 0.4) 0px 0px 15px 1px;
+    z-index: 11000;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 450px;
+    height: auto;
+    padding: 15px;
+    background-color: $mainColor;
+    max-height: 500px;
+    overflow: auto;
+
+    &::-webkit-scrollbar-track
+    {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        background-color: $mainColor;
+    }
+
+    &::-webkit-scrollbar
+    {
+        width: 8px;
+        background-color: #F5F5F5;
+    }
+
+    &::-webkit-scrollbar-thumb
+    {
+        background-color: $textColor;
+        border-radius: 20px;
+        border: 2px $disabledTextColor solid;
+    }
+
+    @media screen and (max-width: 500px){
+        & {
+            width: 350px;
+        }
+    }
+
+    @media screen and (max-width: 400px){
+        & {
+            width: 300px;
+        }
+    }
+}

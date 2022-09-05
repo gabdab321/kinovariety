@@ -3,6 +3,7 @@ import cl from "./Search.module.scss"
 import {useAppDispatch} from "../../hooks/redux";
 import {setQuery} from "../../store/reducers/searchQuerySlice";
 import useDebounce from "../../hooks/useDebounce";
+import SearchDropdown from "./SearchDropdown/SearchDropdown";
 
 const Search = () => {
     const dispatch = useAppDispatch()
@@ -28,6 +29,13 @@ const Search = () => {
                     placeholder="Пошук..."
                 />
             </label>
+
+            {userQuery.length === 0
+                ?
+                ""
+                :
+                <SearchDropdown />
+            }
         </div>
     );
 };
