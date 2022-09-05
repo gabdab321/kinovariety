@@ -1,6 +1,9 @@
 @import "./src/styles/variables";
 
 .header {
+    position: sticky;
+    top: 0;
+    z-index: 10000;
     background-color: $secondaryColor;
     width: 100%;
     height: 70px;
@@ -8,45 +11,6 @@
     align-items: center;
     justify-content: center;
     padding: 0 60px;
-
-    &__nav {
-        display: flex;
-        align-items: center;
-
-        & a:not(:first-child) {
-            margin-left: 80px;
-        }
-    }
-
-    &__link {
-        color: $disabledTextColor;
-        text-decoration: none;
-        font-size: 20px;
-        transition: 0.2s all;
-
-        &:hover {
-            transform: scale(1.08);
-        }
-    }
-
-    @media screen and (max-width: $sm){
-        & {
-            padding: 0 20px;
-        }
-
-        &__nav {
-            & a:not(:first-child) {
-                margin-left: 40px;
-            }
-        }
-
-        &__link {
-            font-size: 16px;
-        }
-    }
-}
-
-.selectedLink {
-    font-weight: 900;
     color: $textColor;
+    box-shadow: rgba(255, 255, 255, 0.3) 0px 0px 20px 1px;
 }

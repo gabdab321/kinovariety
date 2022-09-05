@@ -5,6 +5,12 @@
     align-items: center;
     flex-direction: column;
     text-decoration: none;
+    border-radius: 10px;
+    transition: 0.5s all;
+
+    &:hover {
+        transform: translateY(4px);
+    }
 
     &__rating {
         display: flex;
@@ -26,6 +32,10 @@
         width: 180px;
         height: 280px;
         position: relative;
+
+        &:hover {
+            box-shadow: rgba(234, 28, 36, 0.35) 0px 0px 25px 3px;
+        }
     }
 
     &__image {

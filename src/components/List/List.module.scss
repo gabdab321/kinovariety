@@ -27,6 +27,13 @@
         color: $textColor;
         background-color: $activeColor;
         padding: 10px 20px;
+        transition: 0.5s all;
+
+        &:hover {
+            background-color: $textColor;
+            color: $activeColor;
+            box-shadow: rgba(234, 28, 36, 0.5) 0px 0px 18px 7px;
+        }
     }
 
     @media screen and (max-width: 1300px){

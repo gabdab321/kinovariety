@@ -9,6 +9,7 @@ interface ListProps {
     films: IFilmShort[]
 }
 
+//todo: make responsibility for big screens
 const List = ({films, title}: ListProps) => {
     return (
         <div className={cl.list}>
