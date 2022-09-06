@@ -4,8 +4,8 @@ import cl from "./Pagination.module.scss"
 
 interface PaginationProps {
     selectedPage: number
-    pageCount: number,
-    onPageChange: (current: { selected: number }) => void,
+    pageCount: number
+    onPageChange: (current: { selected: number }) => void
 }
 
 const Pagination = ({onPageChange, pageCount, selectedPage}: PaginationProps) => {

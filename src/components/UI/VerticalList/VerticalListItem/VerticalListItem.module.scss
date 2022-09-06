@@ -29,8 +29,8 @@
     }
 
     &__image_container {
-        width: 180px;
-        height: 280px;
+        width: 230px;
+        height: 330px;
         position: relative;
 
         &:hover {
@@ -47,8 +47,9 @@
     &__title {
         margin-top: 10px;
         font-weight: bold;
-        font-size: 18px;
+        font-size: 20px;
         color: $textColor;
+        max-width: 230px;
         text-align: center;
     }
 

@@ -3,16 +3,23 @@ import {IFilmSearch} from "../../../models/IFilmSearch";
 import cl from "./SearchItem.module.scss"
 import {humanReadableCategory} from "../../../utils/humanReadableCategory";
 import {Link} from "react-router-dom";
+import {useAppDispatch} from "../../../hooks/redux";
+import {setQuery} from "../../../store/reducers/searchQuerySlice";
 
 interface SearchItemProps {
     film: IFilmSearch
 }
 
 const SearchItem = ({film}: SearchItemProps) => {
+    const dispatch = useAppDispatch()
     const shortInformation = `${film.year}, ${humanReadableCategory(film.type)}`
 
+    function handleClick() {
+        dispatch(setQuery(""))
+    }
+
     return (
-        <Link to={`/film/${film.filmId}`} className={cl.item}>
+        <Link onClick={handleClick} to={`/film/${film.filmId}`} className={cl.item}>
             <div className={cl.item__image_container}>
                 <img className={cl.item__image} src={film.posterUrlPreview} alt=""/>
             </div>

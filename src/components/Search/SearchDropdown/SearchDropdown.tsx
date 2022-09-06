@@ -6,7 +6,11 @@ import Loader from "../../UI/Loader/Loader";
 import {IFilmSearch} from "../../../models/IFilmSearch";
 import SearchItem from "../SearchItem/SearchItem";
 
-const SearchDropdown = () => {
+interface SearchDropdownProps {
+    isVisible: boolean
+}
+
+const SearchDropdown = ({isVisible}: SearchDropdownProps) => {
     const {query} = useAppSelector(state => state.searchQuery)
     const {data, isFetching} = filmAPI.useSearchFilmsQuery(query)
 
@@ -21,7 +25,7 @@ const SearchDropdown = () => {
     }, [data])
 
     return (
-        <div className={cl.dropdown}>
+        <div hidden={!isVisible} className={cl.dropdown}>
             {currentFilms.length === 0
                 ?
                 ""
