@@ -1,9 +1,8 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {IFilmFull} from "../../models/IFilmFull";
 import cl from "./FilmPageItem.module.scss"
 import {transformArrayToStr} from "../../utils/transformArrayToStr";
 import {getAgeLimit} from "../../utils/getAgeLimit";
-import FilmPlayer from "../FilmPlayer/FilmPlayer";
 import {filmAPI} from "../../services/filmAPI";
 
 interface FilmPageItemProps {
@@ -41,8 +40,6 @@ const FilmPageItem = ({film}: FilmPageItemProps) => {
 
             <h2 className={cl.item__description_title}>Опис {film.serial ? "серіалу" : "фільму"}</h2>
             <p className={cl.item__description}>{film.description  || "Немає опису"}</p>
-
-            <FilmPlayer id={film.kinopoiskId}/>
         </div>
     );
 };

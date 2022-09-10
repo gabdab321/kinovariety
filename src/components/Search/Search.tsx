@@ -23,11 +23,12 @@ const Search = () => {
     }
 
     function handleBlur() {
-          setDropdownVisible(false)
+        setTimeout(() => setDropdownVisible(false),300)
     }
 
     useEffect(() => {
         dispatch(setQuery(userQuery))
+        // eslint-disable-next-line
     }, [debouncedQuery])
 
     useEffect(() => {

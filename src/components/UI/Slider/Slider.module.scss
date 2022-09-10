@@ -1,0 +1,56 @@
+@import "./src/styles/variables";
+
+.customSlider {
+    width: 400px;
+    max-width: 300px;
+    margin: 80px auto;
+}
+
+.customSlider-track {
+    border-radius: 18px;
+    top: 13px;
+    height: 8px;
+    background: $disabledTextColor;
+}
+
+.customSlider-track.customSlider-track-0 {
+    background: $activeColor;
+}
+
+.customSlider-thumb {
+    cursor: pointer;
+    /*color for the thumb */
+    background: $activeColor;
+    /* shape of the thumb: circle */
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    /* remove default outline when selected */
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bolder;
+    color: $textColor;
+}
+
+.customSlider-thumb:hover {
+    box-shadow: 0 0 0 8px rgba(234, 28, 36, 0.2);
+}
+
+.customSlider-mark {
+    cursor: pointer;
+    top: 20px;
+    width: 4px;
+    height: 8px;
+    background-color: $mainColor;
+}
+
+.customSlider-mark.customSlider-mark-before {
+    background-color: $activeColor;
+}
+
+.customSlider-mark.customSlider-mark-active {
+    display: none;
+}
