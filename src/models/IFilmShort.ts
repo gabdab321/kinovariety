@@ -5,6 +5,7 @@ export interface IFilmShort {
     posterUrl: string,
     posterUrlPreview: string,
     ratingImdb: number,
+    ratingKinopoisk: number,
     year: number,
     type: string,
     countries: Array<{country: string}>,

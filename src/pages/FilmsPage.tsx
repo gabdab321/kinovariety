@@ -5,18 +5,24 @@ import {IFilter} from "../models/IFilter";
 import Loader from "../components/UI/Loader/Loader";
 import ErrorWarning from "../components/UI/ErrorWarning/ErrorWarning";
 import Pagination from "../components/UI/Pagination/Pagination";
+import Filter from "../components/Filter/Filter";
+import {standardFilter} from "../mock/standardFilter";
 
 const FilmsPage = () => {
-    const [page, setPage] = useState<number>(1)
-    const {data, isFetching, isError} = filmAPI.useFetchFilmsByFilterQuery({page: page} as IFilter)
+    const [filter, setFilter] = useState<IFilter>(standardFilter)
+
+    const {data, isFetching, isError} = filmAPI.useFetchFilmsByFilterQuery(filter)
+    console.log(data)
 
     function handlePageChange(current: { selected: number }) {
-        setPage(current.selected + 1)
+        setFilter({...filter, page: current.selected + 1})
         window.scrollTo(0, 0)
     }
 
     return (
         <div className="page">
+            <Filter filter={filter} setFilter={setFilter}/>
+
             {isFetching
                 ?
                 <Loader style={{margin: "30px auto"}}/>
@@ -25,7 +31,7 @@ const FilmsPage = () => {
                     <VerticalList films={data?.items || []} />
 
                     <Pagination
-                        selectedPage={page - 1}
+                        selectedPage={filter.page - 1}
                         pageCount={data?.totalPages || 1}
                         onPageChange={handlePageChange}
                     />

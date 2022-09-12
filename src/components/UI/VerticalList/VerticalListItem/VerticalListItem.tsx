@@ -12,7 +12,7 @@ const VerticalListItem = ({film}: VerticalListItemProps) => {
     const shortInformation = `${film.year}, ${humanReadableCategory(film.type)}`
 
     return (
-        <Link to={`/film/${film.kinopoiskId}`} className={cl.item}>
+        <Link target="_blank" rel="noopener noreferrer" to={`/film/${film.kinopoiskId}`} className={cl.item}>
             <div className={cl.item__image_container}>
                 <div className={cl.item__rating}>{film.ratingImdb}</div>
                 <img className={cl.item__image} src={film.posterUrlPreview} alt="" />

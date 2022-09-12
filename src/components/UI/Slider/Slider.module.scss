@@ -1,16 +1,16 @@
 @import "./src/styles/variables";
 
 .customSlider {
-    width: 400px;
-    max-width: 300px;
-    margin: 80px auto;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 10px;
 }
 
 .customSlider-track {
     border-radius: 18px;
-    top: 13px;
+    top: 14px;
     height: 8px;
-    background: $disabledTextColor;
+    background: #2c3e50;
 }
 
 .customSlider-track.customSlider-track-0 {
@@ -22,15 +22,15 @@
     /*color for the thumb */
     background: $activeColor;
     /* shape of the thumb: circle */
-    width: 30px;
-    height: 30px;
+    width: 36px;
+    height: 36px;
     border-radius: 100%;
     /* remove default outline when selected */
     outline: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bolder;
     color: $textColor;
 }
@@ -41,7 +41,6 @@
 
 .customSlider-mark {
     cursor: pointer;
-    top: 20px;
     width: 4px;
     height: 8px;
     background-color: $mainColor;

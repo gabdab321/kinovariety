@@ -817,10 +817,6 @@ export const countries: country[] = [
         "id": 211
     },
     {
-        "country": "Екваторіальна Гвінея ",
-        "id": 22
-    },
-    {
         "country": "Тувалу",
         "id": 215
     },
