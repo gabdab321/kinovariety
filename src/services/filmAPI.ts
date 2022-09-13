@@ -67,6 +67,12 @@ export const filmAPI = createApi({
             query: (query) => ({
                 url: `/api/v2.1/films/search-by-keyword?keyword=${query}&page=1`
             })
+        }),
+
+        fetchSimilars: build.query<IResponse, number | string>({
+            query: (id) => ({
+                url: `/api/v2.2/films/${id}/similars`
+            })
         })
     })
 })

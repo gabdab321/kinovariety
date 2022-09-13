@@ -1,4 +1,6 @@
 export interface IFilmShort {
+    relationType?: "SIMILAR",
+    filmId?: number,
     kinopoiskId: number,
     nameRu: string,
     nameOriginal: string,

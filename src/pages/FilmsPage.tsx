@@ -12,7 +12,6 @@ const FilmsPage = () => {
     const [filter, setFilter] = useState<IFilter>(standardFilter)
 
     const {data, isFetching, isError} = filmAPI.useFetchFilmsByFilterQuery(filter)
-    console.log(data)
 
     function handlePageChange(current: { selected: number }) {
         setFilter({...filter, page: current.selected + 1})
