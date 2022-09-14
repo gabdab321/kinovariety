@@ -2,7 +2,8 @@
 
 .search {
     position: relative;
-    margin: auto;
+    z-index: 9000;
+    margin: 0 auto;
 
     &__label {
         display: flex;
@@ -28,5 +29,15 @@
             box-shadow: rgba(234, 26, 38, 0.4) 0px 0px 15px 1px;
             outline: none;
         }
+    }
+
+    @media screen and (max-width: 600px) {
+        & {
+            margin: 0;
+        }
+    }
+
+    @media screen and (max-width: 370px) {
+        width: 250px;
     }
 }

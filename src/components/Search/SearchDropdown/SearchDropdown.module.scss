@@ -34,6 +34,12 @@
         border: 2px $disabledTextColor solid;
     }
 
+    @media screen and (max-width: 600px){
+        & {
+            transform: translateX(-40%);
+        }
+    }
+
     @media screen and (max-width: 500px){
         & {
             width: 350px;
