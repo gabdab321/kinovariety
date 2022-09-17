@@ -4,8 +4,6 @@ import AppRouter from "./routes/AppRouter";
 import Navbar from "./components/UI/Navbar/Navbar";
 
 function App() {
-    console.log(process.env.API_TOKEN)
-
     return (
         <div className="App">
             <Navbar />

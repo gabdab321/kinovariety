@@ -18,7 +18,7 @@ export const SidebarData = [
     },
     {
         title: 'Серіали',
-        path: '/products',
+        path: '/series',
         icon: <TbIcons.TbLayoutList />,
         cName: 'nav-text'
     },
