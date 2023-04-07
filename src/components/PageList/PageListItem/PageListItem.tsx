@@ -1,14 +1,14 @@
 import React from 'react';
-import {humanReadableCategory} from "../../../../utils/humanReadableCategory";
+import {humanReadableCategory} from "../../../utils/humanReadableCategory";
 import {Link} from "react-router-dom";
-import {IFilmShort} from "../../../../models/IFilmShort";
-import cl from "./VerticalListItem.module.scss"
+import {IFilmShort} from "../../../models/IFilmShort";
+import cl from "./PageListItem.module.scss"
 
-interface VerticalListItemProps {
+interface PageListItemProps {
     film: IFilmShort
 }
 
-const VerticalListItem = ({film}: VerticalListItemProps) => {
+const PageListItem = ({film}: PageListItemProps) => {
     const shortInformation = `${film.year}, ${humanReadableCategory(film.type)}`
 
     return (
@@ -24,4 +24,4 @@ const VerticalListItem = ({film}: VerticalListItemProps) => {
     );
 };
 
-export default VerticalListItem;
+export default PageListItem;

@@ -4,10 +4,6 @@ import cl from "./FilmPageItem.module.scss"
 import {transformArrayToStr} from "../../utils/transformArrayToStr";
 import {getAgeLimit} from "../../utils/getAgeLimit";
 import {filmAPI} from "../../services/filmAPI";
-import VerticalList from "../UI/VerticalList/VerticalList";
-import List from "../List/List";
-import Loader from "../UI/Loader/Loader";
-import ErrorWarning from "../UI/ErrorWarning/ErrorWarning";
 
 interface FilmPageItemProps {
     film: IFilmFull

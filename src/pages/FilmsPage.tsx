@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import VerticalList from "../components/UI/VerticalList/VerticalList";
+import PageList from "./../components/PageList/PageList";
 import {filmAPI} from "../services/filmAPI";
 import {IFilter} from "../models/IFilter";
 import Loader from "../components/UI/Loader/Loader";
@@ -27,7 +27,7 @@ const FilmsPage = () => {
                 <Loader style={{margin: "30px auto"}}/>
                 :
                 <>
-                    <VerticalList films={data?.items || []} />
+                    <PageList films={data?.items || []} />
 
                     <Pagination
                         selectedPage={filter.page - 1}

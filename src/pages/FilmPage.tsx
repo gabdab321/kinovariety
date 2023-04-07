@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {useParams} from "react-router-dom";
 import {filmAPI} from "../services/filmAPI";
 import Loader from "../components/UI/Loader/Loader";
@@ -6,7 +6,7 @@ import ErrorWarning from "../components/UI/ErrorWarning/ErrorWarning";
 import FilmPageItem from "../components/FilmPageItem/FilmPageItem";
 import FilmPlayer from "../components/FilmPlayer/FilmPlayer";
 import {IFilmFull} from "../models/IFilmFull";
-import List from "../components/List/List";
+import PosterList from "../components/PosterList/PosterList";
 
 const FilmPage = () => {
     window.scrollTo(0, 0)
@@ -34,7 +34,7 @@ const FilmPage = () => {
                 ?
                 <Loader/>
                 :
-                <List title="Схожі:" films={similars?.items.slice(0, 10) || []} style={{margin: "0px auto"}}/>
+                <PosterList title="Схожі:" films={similars?.items.slice(0, 10) || []} styles={{margin: "0px auto"}}/>
             }
         </div>
     );

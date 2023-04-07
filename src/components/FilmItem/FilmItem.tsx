@@ -12,7 +12,7 @@ const FilmItem = ({film}: FilmItemProps) => {
     const shortInformation = `${film.year}, ${humanReadableCategory(film.type)}`
 
     return (
-        <Link to={`/film/${film.kinopoiskId || film.filmId}`} className={cl.item}>
+        <Link target="_blank" rel="noopener noreferrer" to={`/film/${film.kinopoiskId || film.filmId}`} className={cl.item}>
             <div className={cl.item__image_container}>
                 {film?.relationType === "SIMILAR" ? "" : <div className={cl.item__rating}>{film.ratingImdb}</div>}
                 <img className={cl.item__image} src={film.posterUrlPreview} alt="" />
