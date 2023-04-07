@@ -1,6 +1,6 @@
 # Kinovariety
 
-It is app for searching and watching films and series
+Kinovariety is an app for watching movies and TV shows. The app has flexible filtering for easy search of movies and TV series
 
 **Link: _https://kinovariety.netlify.app/_**
 
