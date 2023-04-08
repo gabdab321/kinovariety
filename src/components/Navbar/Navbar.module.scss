@@ -1,4 +1,4 @@
-@import "./src/styles/variables";
+@import "../../styles/variables";
 
 .header {
     position: sticky;
@@ -34,4 +34,25 @@
             display: none;
         }
     }
+}
+
+.navbar {
+    position: absolute;
+    background-color: transparent;
+    right: 60px;
+    height: 80px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    @media screen and (max-width: 480px) {
+        right: 30px;
+    }
+}
+
+.menu-bars {
+    font-size: 2rem;
+    background: none;
+    display: flex;
+    align-items: center;
 }

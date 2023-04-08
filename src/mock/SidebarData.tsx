@@ -12,18 +12,18 @@ export const SidebarData = [
         title: 'Додому',
         path: '/',
         icon: <AiIcons.AiFillHome />,
-        cName: 'nav-text'
+        cName: 'nav-item'
     },
     {
         title: 'Фільми',
         path: '/films',
         icon: <BsIcons.BsFilm />,
-        cName: 'nav-text'
+        cName: 'nav-item'
     },
     {
         title: 'Серіали',
         path: '/series',
         icon: <TbIcons.TbLayoutList />,
-        cName: 'nav-text'
+        cName: 'nav-item'
     },
 ];
