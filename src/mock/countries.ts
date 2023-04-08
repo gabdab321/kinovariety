@@ -3,6 +3,10 @@ interface country {
     country: string
 }
 
+/*
+    Just exports mock array of objects that contains properties country and id. Used to filter films
+*/
+
 export const countries: country[] = [
     {
         "country": "Україна ",

@@ -1,6 +1,10 @@
 import React from 'react';
 import {Routes, Route} from "react-router-dom";
-import {routes} from "./routes";
+import {routes} from "../routes/routes";
+
+/*
+     This component is used to map and render array of app routes. It takes routes array from "routes.tsx" file
+*/
 
 const AppRouter = () => {
     return (

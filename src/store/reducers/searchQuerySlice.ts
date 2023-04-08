@@ -1,5 +1,9 @@
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 
+/*
+    Slice for handling data that user inputs in search input that is located at navbar
+*/
+
 interface SearchQueryState {
     query: string
 }

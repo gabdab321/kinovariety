@@ -1,3 +1,7 @@
+/*
+    Model that describes short information of the film
+*/
+
 export interface IFilmShort {
     relationType?: "SIMILAR",
     filmId?: number,

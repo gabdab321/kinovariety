@@ -1,3 +1,7 @@
+/*
+    Model describes full information about film. Usually appears on FilmPage page
+*/
+
 export interface IFilmFull {
     kinopoiskId: number,
     nameRu: string,

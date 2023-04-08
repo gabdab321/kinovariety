@@ -4,7 +4,7 @@ import {countries} from "../../mock/countries";
 import {genres} from "../../mock/genres";
 import cl from "./Filter.module.scss"
 import {IFilter} from "../../models/IFilter";
-import {standardFilter} from "../../mock/standardFilter";
+import {defaultFilter} from "../../mock/defaultFilter";
 
 interface FilterProps {
     filter: IFilter
@@ -16,7 +16,7 @@ interface FilterProps {
 const Filter = ({filter: currentFilter, setFilter: dispatch}: FilterProps) => {
     const [visible, setVisible] = useState<boolean>(false)
 
-    const [filter, setFilter] = useState<IFilter>(standardFilter)
+    const [filter, setFilter] = useState<IFilter>(defaultFilter)
 
     function toggleVisibility(): void {
         setVisible(!visible)

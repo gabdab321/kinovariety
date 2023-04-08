@@ -1,3 +1,6 @@
+/*
+    Describes series episode information.
+*/
 interface IEpisode {
     seasonNumber: number
     episodeNumber: number
@@ -7,11 +10,17 @@ interface IEpisode {
     releaseDate: string
 }
 
+/*
+    Describes season information.
+*/
 export interface ISeason {
     number: number
     episodes: IEpisode[]
 }
 
+/*
+    Describes server response that contains seasons.
+*/
 export interface IResponseSeasons {
     total: number
     items: ISeason[]

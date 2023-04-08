@@ -3,6 +3,10 @@ import * as AiIcons from 'react-icons/ai';
 import * as BsIcons from 'react-icons/bs';
 import * as TbIcons from 'react-icons/tb'
 
+/*
+    Exports const that contains params for links inside Sidebar component
+*/
+
 export const SidebarData = [
     {
         title: 'Додому',

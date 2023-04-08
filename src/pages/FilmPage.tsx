@@ -12,8 +12,8 @@ const FilmPage = () => {
     window.scrollTo(0, 0)
 
     const {id} = useParams()
-    const {data: film, isLoading, isError} = filmAPI.useFetchByIdQuery(id as string)
-    const {data: similars, isFetching: isSimilarsFetching, isError: isSimilarsError} = filmAPI.useFetchSimilarsQuery(id || "")
+    const {data: film, isLoading, isError} = filmAPI.useGetByIdQuery(id as string)
+    const {data: similars, isFetching: isSimilarsFetching, isError: isSimilarsError} = filmAPI.useGetSimilarsQuery(id || "")
 
     return (
         <div style={{padding: "20px"}}>

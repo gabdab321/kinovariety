@@ -5,13 +5,13 @@ import {IFilter} from "../models/IFilter";
 import Loader from "../components/UI/Loader/Loader";
 import ErrorWarning from "../components/UI/ErrorWarning/ErrorWarning";
 import Pagination from "../components/UI/Pagination/Pagination";
-import {standardFilter} from "../mock/standardFilter";
+import {defaultFilter} from "../mock/defaultFilter";
 import Filter from "../components/Filter/Filter";
 
 const SeriesPage = () => {
-    const [filter, setFilter] = useState<IFilter>(standardFilter)
+    const [filter, setFilter] = useState<IFilter>(defaultFilter)
 
-    const {data, isFetching, isError} = filmAPI.useFetchSeriesByFilterQuery(filter)
+    const {data, isFetching, isError} = filmAPI.useGetSeriesByFilterQuery(filter)
 
     function handlePageChange(current: { selected: number }) {
         setFilter({...filter, page: current.selected + 1})

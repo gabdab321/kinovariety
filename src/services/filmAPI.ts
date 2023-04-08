@@ -7,6 +7,10 @@ import {API_TOKEN} from "../consts";
 import {IResponseSeasons} from "../models/ISeasons";
 import {IResponseSearch} from "../models/IResponseSearch";
 
+/*
+    RTK Query logic for working with API
+*/
+
 export const filmAPI = createApi({
     reducerPath: "filmAPI",
 
@@ -21,43 +25,43 @@ export const filmAPI = createApi({
     }),
 
     endpoints: build => ({
-        fetchById: build.query<IFilmFull, number | string>({
+        getById: build.query<IFilmFull, number | string>({
             query: (id) => ({
                 url: `/api/v2.2/films/${id}`
             })
         }),
 
-        fetchFilms: build.query<IResponse, number>({
+        getFilms: build.query<IResponse, number>({
             query: (page= 1) => ({
                 url: `/api/v2.2/films?type=FILM&page=${page}&order=NUM_VOTE`
             })
         }),
 
-        fetchSeries: build.query<IResponse, number>({
+        getSeries: build.query<IResponse, number>({
             query: (page= 1) => ({
                 url: `/api/v2.2/films?type=TV_SERIES&page=${page}&order=NUM_VOTE`
             })
         }),
 
-        fetchShows: build.query<IResponse, number>({
+        getShows: build.query<IResponse, number>({
             query: (page = 1) => ({
                 url: `/api/v2.2/films?type=TV_SHOW&page=${page}&order=NUM_VOTE`
             })
         }),
 
-        fetchFilmsByFilter: build.query<IResponse, IFilter>({
+        getFilmsByFilter: build.query<IResponse, IFilter>({
             query: (filter) => ({
                 url: `/api/v2.2/films?type=FILM&order=NUM_VOTE&countries=${filter.country || ""}&genres=${filter.genre || ""}&ratingFrom=${filter.ratingFrom || 0}&ratingTo=${filter.ratingTo || 10}&yearFrom=${filter.yearFrom || 1960}&yearTo=${filter.yearTo || getCurrentYear()}&page=${filter.page || 1}`
             })
         }),
 
-        fetchSeriesByFilter: build.query<IResponse, IFilter>({
+        getSeriesByFilter: build.query<IResponse, IFilter>({
             query: (filter) => ({
                 url: `/api/v2.2/films?type=TV_SERIES&order=NUM_VOTE&countries=${filter.country || ""}&genres=${filter.genre || ""}&ratingFrom=${filter.ratingFrom || 0}&ratingTo=${filter.ratingTo || 10}&yearFrom=${filter.yearFrom || 1960}&yearTo=${filter.yearTo || getCurrentYear()}&page=${filter.page || 1}`
             })
         }),
 
-        fetchSeasons: build.query<IResponseSeasons, number>({
+        getSeasons: build.query<IResponseSeasons, number>({
             query: (id) => ({
                 url: `/api/v2.2/films/${id}/seasons`
             })
@@ -69,7 +73,7 @@ export const filmAPI = createApi({
             })
         }),
 
-        fetchSimilars: build.query<IResponse, number | string>({
+        getSimilars: build.query<IResponse, number | string>({
             query: (id) => ({
                 url: `/api/v2.2/films/${id}/similars`
             })

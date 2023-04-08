@@ -6,8 +6,8 @@ import ErrorWarning from "../components/UI/ErrorWarning/ErrorWarning";
 import {filterFilms} from "../utils/filterFilms/filterFilms";
 
 const HomePage = () => {
-    const {data: films, isError : isErrorFilms} = filmAPI.useFetchFilmsQuery(2)
-    const {data: series, isError: isErrorSeries} = filmAPI.useFetchSeriesQuery(1)
+    const {data: films, isError : isErrorFilms} = filmAPI.useGetFilmsQuery(2)
+    const {data: series, isError: isErrorSeries} = filmAPI.useGetSeriesQuery(1)
 
     return (
         <div className="HomePage">

@@ -10,7 +10,7 @@ interface FilmPageItemProps {
 }
 
 const FilmPageItem = ({film}: FilmPageItemProps) => {
-    const {data} = filmAPI.useFetchSeasonsQuery(film.kinopoiskId)
+    const {data} = filmAPI.useGetSeasonsQuery(film.kinopoiskId)
 
     return (
         <div className={cl.item}>

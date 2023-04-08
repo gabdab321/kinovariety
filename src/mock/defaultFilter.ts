@@ -1,6 +1,10 @@
 import {IFilter} from "../models/IFilter";
 
-export const standardFilter: IFilter = {
+/*
+    Exports object that contains default params for filter
+*/
+
+export const defaultFilter: IFilter = {
     page: 1,
     genre: "",
     country: "",

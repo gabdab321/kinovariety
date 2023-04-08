@@ -1,3 +1,7 @@
+/*
+    Model describes information about films that comes after request with query line
+*/
+
 export interface IFilmSearch {
     filmId: number,
     nameRu: string,
