@@ -1,7 +1,7 @@
 import React from 'react';
 import {IFilmSearch} from "../../../models/IFilmSearch";
 import cl from "./SearchItem.module.scss"
-import {humanReadableCategory} from "../../../utils/humanReadableCategory";
+import {formatCategory} from "../../../utils/formatCategory/formatCategory";
 import {Link} from "react-router-dom";
 import {useAppDispatch} from "../../../hooks/redux";
 import {setQuery} from "../../../store/reducers/searchQuerySlice";
@@ -12,7 +12,7 @@ interface SearchItemProps {
 
 const SearchItem = ({film}: SearchItemProps) => {
     const dispatch = useAppDispatch()
-    const shortInformation = `${film.year}, ${humanReadableCategory(film.type)}`
+    const shortInformation = `${film.year}, ${formatCategory(film.type)}`
 
     function handleClick() {
         dispatch(setQuery(""))

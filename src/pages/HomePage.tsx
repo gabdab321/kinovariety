@@ -3,7 +3,7 @@ import {filmAPI} from "../services/filmAPI";
 import Loader from "../components/UI/Loader/Loader";
 import PosterList from "../components/PosterList/PosterList";
 import ErrorWarning from "../components/UI/ErrorWarning/ErrorWarning";
-import {filterFilms} from "../utils/filterFilms";
+import {filterFilms} from "../utils/filterFilms/filterFilms";
 
 const HomePage = () => {
     const {data: films, isError : isErrorFilms} = filmAPI.useFetchFilmsQuery(2)

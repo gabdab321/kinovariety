@@ -1,6 +1,10 @@
-import {Categories} from "./categories";
+import {Categories} from "../categories";
 
-export function humanReadableCategory(category: string) {
+/*
+    Function that formats categories to human readable.
+*/
+
+export function formatCategory(category: string) {
     switch (category) {
         case Categories.FILM:
             return "фільм"

@@ -2,7 +2,7 @@ import {createApi, fetchBaseQuery} from "@reduxjs/toolkit/dist/query/react";
 import {IFilmFull} from "../models/IFilmFull";
 import {IResponse} from "../models/IResponse";
 import {IFilter} from "../models/IFilter";
-import {getCurrentYear} from "../utils/getCurrentYear";
+import {getCurrentYear} from "../utils/getCurrentYear/getCurrentYear";
 import {API_TOKEN} from "../consts";
 import {IResponseSeasons} from "../models/ISeasons";
 import {IResponseSearch} from "../models/IResponseSearch";

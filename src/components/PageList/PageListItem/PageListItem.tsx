@@ -1,5 +1,5 @@
 import React from 'react';
-import {humanReadableCategory} from "../../../utils/humanReadableCategory";
+import {formatCategory} from "../../../utils/formatCategory/formatCategory";
 import {Link} from "react-router-dom";
 import {IFilmShort} from "../../../models/IFilmShort";
 import cl from "./PageListItem.module.scss"
@@ -9,7 +9,7 @@ interface PageListItemProps {
 }
 
 const PageListItem = ({film}: PageListItemProps) => {
-    const shortInformation = `${film.year}, ${humanReadableCategory(film.type)}`
+    const shortInformation = `${film.year}, ${formatCategory(film.type)}`
 
     return (
         <Link target="_blank" rel="noopener noreferrer" to={`/film/${film.kinopoiskId}`} className={cl.item}>

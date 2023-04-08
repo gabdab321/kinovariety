@@ -1,8 +1,8 @@
 import React from 'react';
 import {IFilmFull} from "../../models/IFilmFull";
 import cl from "./FilmPageItem.module.scss"
-import {transformArrayToStr} from "../../utils/transformArrayToStr";
-import {getAgeLimit} from "../../utils/getAgeLimit";
+import {transformArrayToStr} from "../../utils/transformArrayToStr/transformArrayToStr";
+import {formatAgeLimit} from "../../utils/formatAgeLimit/formatAgeLimit";
 import {filmAPI} from "../../services/filmAPI";
 
 interface FilmPageItemProps {
@@ -24,9 +24,9 @@ const FilmPageItem = ({film}: FilmPageItemProps) => {
                     <li className={cl.item__about_item}><span>Рейтинг: </span> {film.ratingImdb || "-"}</li>
                     <li className={cl.item__about_item}><span>Слоган: </span> {film.slogan ? `«${film.slogan}»` : "-"}</li>
                     <li className={cl.item__about_item}><span>Рік виходу: </span> {film.year || "-"}</li>
-                    <li className={cl.item__about_item}><span>Країни: </span> {film.countries ? transformArrayToStr("country", film.countries) : "-"}</li>
-                    <li className={cl.item__about_item}><span>Жанри: </span> {film.genres ? transformArrayToStr("genre", film.genres) : "-"}</li>
-                    <li className={cl.item__about_item}><span>Вікові обмеження: </span> {film.ratingAgeLimits ?  getAgeLimit(film.ratingAgeLimits) : "-"}</li>
+                    <li className={cl.item__about_item}><span>Країни: </span> {film.countries ? transformArrayToStr(film.countries, "country") : "-"}</li>
+                    <li className={cl.item__about_item}><span>Жанри: </span> {film.genres ? transformArrayToStr(film.genres, "genre") : "-"}</li>
+                    <li className={cl.item__about_item}><span>Вікові обмеження: </span> {film.ratingAgeLimits ?  formatAgeLimit(film.ratingAgeLimits) : "-"}</li>
 
                     {film.serial
                         ?
