@@ -1,0 +1,33 @@
+@import "./src/styles/variables";
+
+.search {
+    &__label {
+        display: flex;
+        align-items: center;
+    }
+
+    &__input {
+        width: 450px;
+        height: 40px;
+        background-color: $mainColor;
+        border: 0;
+        border-radius: 10px;
+        padding: 10px;
+        color: $textColor;
+        font-weight: bolder;
+        font-size: 18px;
+
+        &::placeholder {
+            font-size: 16px;
+        }
+
+        &:focus {
+            box-shadow: rgba(234, 26, 38, 0.4) 0px 0px 15px 1px;
+            outline: none;
+        }
+
+        @media screen and (max-width: 700px) {
+            width: 300px;
+        }
+    }
+}

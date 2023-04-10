@@ -1,6 +1,6 @@
 import {configureStore} from "@reduxjs/toolkit";
 import {filmAPI} from "../services/filmAPI";
-import {searchQueryReducer} from "./reducers/searchQuerySlice";
+import {searchQueryReducer} from "./reducers/querySlice";
 
 const reducer = {
     [filmAPI.reducerPath]: filmAPI.reducer,

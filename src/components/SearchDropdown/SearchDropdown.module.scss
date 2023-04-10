@@ -1,4 +1,4 @@
-@import "../../../styles/variables";
+@import "../../styles/variables";
 
 .dropdown {
     border-radius: 10px;
@@ -34,13 +34,14 @@
         border: 2px $disabledTextColor solid;
     }
 
-    @media screen and (max-width: 600px){
+    @media screen and (max-width: 700px){
         & {
-            transform: translateX(-40%);
+            transform: translateX(0);
+            left: 0;
         }
     }
 
-    @media screen and (max-width: 500px){
+    @media screen and (max-width: 570px){
         & {
             width: 350px;
         }

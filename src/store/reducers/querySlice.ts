@@ -12,7 +12,7 @@ const initialState: SearchQueryState = {
     query: ""
 }
 
-export const searchQuerySlice = createSlice({
+export const querySlice = createSlice({
     name: "searchQuery",
     initialState,
     reducers: {
@@ -22,5 +22,5 @@ export const searchQuerySlice = createSlice({
     }
 })
 
-export const searchQueryReducer = searchQuerySlice.reducer
-export const {setQuery} = searchQuerySlice.actions
+export const searchQueryReducer = querySlice.reducer
+export const {setQuery} = querySlice.actions
