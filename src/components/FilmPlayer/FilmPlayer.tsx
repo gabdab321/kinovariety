@@ -21,7 +21,7 @@ const FilmPlayer = ({id}: FilmPlayerProps) => {
 
     return (
         <div className={cl.player_container}>
-            <div className={cl.player} id="kinobd" data-resize="1" data-bg="#000" data-kinopoisk={id}/>
+            <div className={cl.player} style={{height: "200px"}} id="kinobd" data-resize="1" data-bg="#000" data-kinopoisk={id}/>
         </div>
     );
 };

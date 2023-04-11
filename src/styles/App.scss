@@ -22,6 +22,14 @@
     padding-bottom: 30px;
 }
 
+.FilmPage {
+    padding: 20px;
+
+    @media screen and (max-width: 550px){
+        padding: 0;
+    }
+}
+
 .page {
     display: flex;
     flex-direction: column;

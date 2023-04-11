@@ -16,7 +16,7 @@ const FilmPage = () => {
     const {data: similars, isFetching: isSimilarsFetching, isError: isSimilarsError} = filmAPI.useGetSimilarsQuery(id || "")
 
     return (
-        <div style={{padding: "20px"}}>
+        <div className="FilmPage">
             {isError && <ErrorWarning />}
             {isLoading
                 ?
@@ -34,7 +34,7 @@ const FilmPage = () => {
                 ?
                 <Loader/>
                 :
-                <PosterList title="Схожі:" films={similars?.items.slice(0, 10) || []} styles={{margin: "0px auto"}}/>
+                <PosterList title="Схожі:" films={similars?.items.slice(0, 10) || []} styles={{margin: "100px auto"}}/>
             }
         </div>
     );
