@@ -1,139 +1,139 @@
 interface genre {
-    id: number,
-    genre: string
+    label: string,
+    value: number
 }
 
 /*
-    Just exports mock array of objects that contains properties genre and id. Used to filter films
+    Just exports mock array of objects that contains properties value and label. Used to filter films
 */
 
 export const genres: genre[] = [
     {
-        "genre": "Триллер",
-        "id": 1
+        "value": 1,
+        "label": "Триллер"
     },
     {
-        "genre": "Драма",
-        "id": 2
+        "value": 2,
+        "label": "Драма"
     },
     {
-        "genre": "Кримінал",
-        "id": 3
+        "value": 3,
+        "label": "Кримінал"
     },
     {
-        "genre": "Мелодрама",
-        "id": 4
+        "value": 4,
+        "label": "Мелодрама"
     },
     {
-        "genre": "Детектив",
-        "id": 5
+        "value": 5,
+        "label": "Детектив"
     },
     {
-        "genre": "Фантастика",
-        "id": 6
+        "value": 6,
+        "label": "Фантастика"
     },
     {
-        "genre": "Пригоди",
-        "id": 7
+        "value": 7,
+        "label": "Пригоди"
     },
     {
-        "genre": "Біографія",
-        "id": 8
+        "value": 8,
+        "label": "Біографія"
     },
     {
-        "genre": "Фільм-нуар",
-        "id": 9
+        "value": 9,
+        "label": "Фільм-нуар"
     },
     {
-        "genre": "Вестерн",
-        "id": 10
+        "value": 10,
+        "label": "Вестерн"
     },
     {
-        "genre": "Бойовик",
-        "id": 11
+        "value": 11,
+        "label": "Бойовик"
     },
     {
-        "genre": "Фентезі",
-        "id": 12
+        "value": 12,
+        "label": "Фентезі"
     },
     {
-        "genre": "Комедія",
-        "id": 13
+        "value": 13,
+        "label": "Комедія"
     },
     {
-        "genre": "Військовий",
-        "id": 14
+        "value": 14,
+        "label": "Військовий"
     },
     {
-        "genre": "Історія",
-        "id": 15
+        "value": 15,
+        "label": "Історія"
     },
     {
-        "genre": "Музика",
-        "id": 16
+        "value": 16,
+        "label": "Музика"
     },
     {
-        "genre": "Фільм жахів",
-        "id": 17
+        "value": 17,
+        "label": "Фільм жахів"
     },
     {
-        "genre": "Мультфільм",
-        "id": 18
+        "value": 18,
+        "label": "Мультфільм"
     },
     {
-        "genre": "Сімейний",
-        "id": 19
+        "value": 19,
+        "label": "Сімейний"
     },
     {
-        "genre": "Мюзикл",
-        "id": 20
+        "value": 20,
+        "label": "Мюзикл"
     },
     {
-        "genre": "Спорт",
-        "id": 21
+        "value": 21,
+        "label": "Спорт"
     },
     {
-        "genre": "Документальний",
-        "id": 22
+        "value": 22,
+        "label": "Документальний"
     },
     {
-        "genre": "Короткометражка",
-        "id": 23
+        "value": 23,
+        "label": "Короткометражка"
     },
     {
-        "genre": "Аніме",
-        "id": 24
+        "value": 24,
+        "label": "Аніме"
     },
     {
-        "genre": "Новини",
-        "id": 26
+        "value": 26,
+        "label": "Новини"
     },
     {
-        "genre": "Концерт",
-        "id": 27
+        "value": 27,
+        "label": "Концерт"
     },
     {
-        "genre": "Для дорослих",
-        "id": 28
+        "value": 28,
+        "label": "Для дорослих"
     },
     {
-        "genre": "Церемонія",
-        "id": 29
+        "value": 29,
+        "label": "Церемонія"
     },
     {
-        "genre": "Реальне ТБ",
-        "id": 30
+        "value": 30,
+        "label": "Реальне ТБ"
     },
     {
-        "genre": "Гра",
-        "id": 31
+        "value": 31,
+        "label": "Гра"
     },
     {
-        "genre": "Ток-шоу",
-        "id": 32
+        "value": 32,
+        "label": "Ток-шоу"
     },
     {
-        "genre": "Для дітей",
-        "id": 33
+        "value": 33,
+        "label": "Для дітей"
     }
 ]

@@ -1,0 +1,87 @@
+@import "./src/styles/variables";
+
+.custom-select {
+    color: $textColor;
+    position: relative;
+    width: 100%;
+}
+
+.select-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: $mainColor;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 50px;
+}
+
+.selected-value {
+    font-weight: bold;
+}
+
+.dropdown-arrow {
+    margin-left: 10px;
+    color: $textColor;
+    transition: all 0.4s;
+
+    &:hover {
+        color: $activeColor;
+    }
+}
+
+.dropdown-menu {
+    position: absolute;
+    width: 100%;
+    max-height: 400px;
+
+    overflow: auto;
+
+    top: 60px;
+    left: 0;
+
+    z-index: 111111;
+
+    margin: 0;
+    padding: 10px 0;
+
+    background-color: $mainColor;
+
+    border: 2px solid $mainColor;
+    border-radius: 12px;
+
+    box-shadow: rgba(234, 28, 36, 0.5) 0px 0px 18px 7px;
+
+    list-style: none;
+    cursor: pointer;
+
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #ffffff;
+        border-radius: 10px;
+        border: 3px solid #ffffff;
+    }
+
+    li {
+        background-color: $mainColor;
+        padding: 10px;
+        border-bottom: 1px solid $secondaryColor;
+        transition: all 0.4s;
+
+        &:last-child {
+            border: 0;
+        }
+
+        &:hover {
+            color: $activeColor;
+        }
+    }
+}
