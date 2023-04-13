@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import styles from './Select.module.scss';
+import {findLabel} from "../../../utils/findLabel/findLabel";
 
 interface Option {
     label: string;
@@ -14,6 +15,8 @@ interface Props {
 function CustomSelect({ options, defaultOption }: Props) {
     const [selectedValue, setSelectedValue] = useState<string | number>(defaultOption ? defaultOption.value : "");
     const [isOpen, setIsOpen] = useState<boolean>(false);
+    const [filteredOptions, setFilteredOptions] = useState<Option[]>(options);
+    const searchInputRef = useRef<HTMLInputElement>(null);
 
     function toggleDropdown() {
         setIsOpen(!isOpen);
@@ -24,31 +27,43 @@ function CustomSelect({ options, defaultOption }: Props) {
         toggleDropdown()
     }
 
-    function findLabel(): string {
-        let selectedOption;
+    function handleSearch(event: React.ChangeEvent<HTMLInputElement>) {
+        const searchText = event.target.value.toLowerCase();
+        const filtered = options.filter(option =>  option.label.toLowerCase().includes(searchText));
+        setFilteredOptions(filtered);
+    }
 
-        if(defaultOption) {
-            selectedOption = [defaultOption, ...options].find(item => item.value === selectedValue);
-        } else {
-            selectedOption = options.find(item => item.value === selectedValue)
+    useEffect(() => {
+        if (isOpen && searchInputRef.current) {
+            searchInputRef.current.focus();
         }
 
-        return selectedOption ? selectedOption.label : "";
-    }
+        if(!isOpen) {
+            setFilteredOptions(options)
+        }
+    }, [isOpen]);
 
     return (
         <div className={styles['custom-select']}>
             <div className={styles['select-box']} onClick={toggleDropdown}>
-                <div className={styles['selected-value']}>{findLabel()}</div>
+                <div className={styles['selected-value']}>{findLabel(options, selectedValue, defaultOption)}</div>
                 <div className={styles['dropdown-arrow']}>{isOpen ? '▲' : '▼'}</div>
             </div>
             {isOpen && (
                 <ul className={styles['dropdown-menu']}>
+                    <div className={styles['search-box']}>
+                        <input
+                            type="text"
+                            placeholder="Пошук..."
+                            onChange={handleSearch}
+                            ref={searchInputRef}
+                        />
+                    </div>
                     {defaultOption && <li onClick={() => handleClick(defaultOption.value)}>
                         {defaultOption?.label}
                     </li>}
 
-                    {options.map((option) => (
+                    {filteredOptions.map((option) => (
                         <li key={option.value} onClick={() => handleClick(option.value)}>
                             {option.label}
                         </li>
