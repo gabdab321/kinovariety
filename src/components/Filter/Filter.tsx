@@ -4,8 +4,8 @@ import {countries} from "../../mock/countries";
 import cl from "./Filter.module.scss"
 import {IFilter} from "../../models/IFilter";
 import {defaultFilter} from "../../mock/defaultFilter";
-import CustomSelect from "../UI/Select/Select";
 import {genres} from "../../mock/genres";
+import Select from "../UI/Select/Select";
 
 interface FilterProps {
     filter: IFilter
@@ -50,10 +50,10 @@ const Filter = ({filter: currentFilter, setFilter: dispatch}: FilterProps) => {
 
                 <div className={cl.filter__select_container}>
                     <p className={cl.filter__label}>Країна виробник:</p>
-                    <CustomSelect options={countries} defaultOption={defaultOption} />
+                    <Select options={countries} defaultOption={defaultOption} />
 
                     <p className={cl.filter__label}>Жанри:</p>
-                    <CustomSelect options={genres} defaultOption={defaultOption} />
+                    <Select options={genres} defaultOption={defaultOption} />
 
                 </div>
 
