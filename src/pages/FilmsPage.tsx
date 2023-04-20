@@ -20,7 +20,7 @@ const FilmsPage = () => {
 
     return (
         <div className="page">
-            <Filter filter={filter} setFilter={setFilter}/>
+            <Filter setFilter={setFilter}/>
 
             {isFetching
                 ?

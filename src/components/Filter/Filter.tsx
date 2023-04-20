@@ -8,62 +8,86 @@ import {genres} from "../../mock/genres";
 import Select from "../UI/Select/Select";
 
 interface FilterProps {
-    filter: IFilter
     setFilter: Dispatch<IFilter>
 }
 
+// default option for Select components
 const defaultOption = {value: "", label: "Усі"}
 
-//todo: add rating filter
+/**
+ * Component to set the filter parameters.
+ * @param {setFilter} - function to dispatch filter parameters.
+ * @returns {JSX.Element} A React component that renders the filter.
+ */
 
-const Filter = ({filter: currentFilter, setFilter: dispatch}: FilterProps) => {
+const Filter = ({setFilter}: FilterProps): JSX.Element => {
+    /* responsible for visibility of the filter */
     const [visible, setVisible] = useState<boolean>(false)
+    /* state for storing all of filter params and not making API request every time it changed */
+    const [newFilter, setNewFilter] = useState<IFilter>(defaultFilter)
 
-    const [filter, setFilter] = useState<IFilter>(defaultFilter)
-
+    /* toggles visibility of the filter */
     function toggleVisibility(): void {
         setVisible(!visible)
     }
 
+    /* event handler for select component. sets country param to the newFilter object */
+    function handleCountryChange(value: string): void {
+        setNewFilter({...newFilter, country: value})
+    }
+
+    /* event handler for select component. sets genre param to the newFilter object */
+    function handleGenreChange(value: string): void {
+        setNewFilter({...newFilter, genre: value})
+    }
+
+    /* event handler for slider component. sets yearsFrom and yearsTo params to the newFilter object */
     function handleChangeYears(value: number[]): void{
-        setFilter({...filter, yearFrom: value[0], yearTo: value[1]})
+        setNewFilter({...newFilter, yearFrom: value[0], yearTo: value[1]})
     }
 
+    /* event handler for slider component. sets ratingFrom and ratingTo params to the newFilter object */
     function handleChangeRating(value: number[]): void{
-        setFilter({...filter, ratingFrom: value[0], ratingTo: value[1]})
+        setNewFilter({...newFilter, ratingFrom: value[0], ratingTo: value[1]})
     }
 
-    function dispatchFilter() {
-        dispatch({...filter, page: currentFilter.page})
+    /* dispatches newFilter to the parent component filter object */
+    function applyChanges(): void {
+        setFilter(newFilter)
     }
 
     return (
         <>
+            {/* responsible for changing visibility of filter */}
             <button
                 style={{marginBottom: "16px"}}
                 onClick={toggleVisibility}
                 className={cl.filter__button}
             >{visible ? "Сховати фільтр" : "Показати фільтр"}</button>
 
-
+            {/* filter */}
             <div style={{display: visible ? "" : "none"}} className={cl.filter}>
 
                 <div className={cl.filter__select_container}>
+                    {/* select that responsible for changing country param */}
                     <p className={cl.filter__label}>Країна виробник:</p>
-                    <Select options={countries} defaultOption={defaultOption} />
+                    <Select onChange={handleCountryChange} options={countries} defaultOption={defaultOption} />
 
+                    {/* select that responsible for changing genre param */}
                     <p className={cl.filter__label}>Жанри:</p>
-                    <Select options={genres} defaultOption={defaultOption} />
-
+                    <Select onChange={handleGenreChange} options={genres} defaultOption={defaultOption} />
                 </div>
 
                 <p className={cl.filter__slider_label}>Роки: </p>
-                <Slider onChange={handleChangeYears} value={[filter.yearFrom, filter.yearTo]} min={1950} max={new Date().getFullYear()}/>
+                {/* slider that responsible for changing yearFrom and yearTo params */}
+                <Slider onChange={handleChangeYears} value={[newFilter.yearFrom, newFilter.yearTo]} min={1900} max={new Date().getFullYear()}/>
 
                 <p style={{marginTop: "30px"}} className={cl.filter__slider_label}>Рейтинг: </p>
-                <Slider onChange={handleChangeRating} value={[filter.ratingFrom, filter.ratingTo]} min={0} max={10}/>
+                {/* slider that responsible for changing ratingFrom and ratingTo params */}
+                <Slider onChange={handleChangeRating} value={[newFilter.ratingFrom, newFilter.ratingTo]} min={0} max={10}/>
 
-                <button onClick={dispatchFilter} style={{marginTop: "50px"}} className={cl.filter__button}>Застосувати</button>
+                {/* this button is responsible for applying changes to the parent component */}
+                <button onClick={applyChanges} style={{marginTop: "50px"}} className={cl.filter__button}>Застосувати</button>
             </div>
         </>
     );

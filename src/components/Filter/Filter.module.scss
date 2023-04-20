@@ -3,9 +3,12 @@
 .filter {
     display: flex;
     flex-direction: column;
-    height: auto;
-    padding-bottom: 50px;
+
     width: 70%;
+    height: auto;
+
+    padding-bottom: 50px;
+
 
     &__select_container {
         width: 100%;

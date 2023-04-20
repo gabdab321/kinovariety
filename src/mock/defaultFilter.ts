@@ -10,6 +10,6 @@ export const defaultFilter: IFilter = {
     country: "",
     ratingFrom: 0,
     ratingTo: 10,
-    yearFrom: 1950,
+    yearFrom: 1900,
     yearTo: new Date().getFullYear()
 }

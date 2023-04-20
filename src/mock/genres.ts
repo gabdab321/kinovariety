@@ -1,6 +1,6 @@
 interface genre {
     label: string,
-    value: number
+    value: string
 }
 
 /*
@@ -9,131 +9,131 @@ interface genre {
 
 export const genres: genre[] = [
     {
-        "value": 1,
+        "value": "1",
         "label": "Триллер"
     },
     {
-        "value": 2,
+        "value": "2",
         "label": "Драма"
     },
     {
-        "value": 3,
+        "value": "3",
         "label": "Кримінал"
     },
     {
-        "value": 4,
+        "value": "4",
         "label": "Мелодрама"
     },
     {
-        "value": 5,
+        "value": "5",
         "label": "Детектив"
     },
     {
-        "value": 6,
+        "value": "6",
         "label": "Фантастика"
     },
     {
-        "value": 7,
+        "value": "7",
         "label": "Пригоди"
     },
     {
-        "value": 8,
+        "value": "8",
         "label": "Біографія"
     },
     {
-        "value": 9,
+        "value": "9",
         "label": "Фільм-нуар"
     },
     {
-        "value": 10,
+        "value": "10",
         "label": "Вестерн"
     },
     {
-        "value": 11,
+        "value": "11",
         "label": "Бойовик"
     },
     {
-        "value": 12,
+        "value": "12",
         "label": "Фентезі"
     },
     {
-        "value": 13,
+        "value": "13",
         "label": "Комедія"
     },
     {
-        "value": 14,
+        "value": "14",
         "label": "Військовий"
     },
     {
-        "value": 15,
+        "value": "15",
         "label": "Історія"
     },
     {
-        "value": 16,
+        "value": "16",
         "label": "Музика"
     },
     {
-        "value": 17,
+        "value": "17",
         "label": "Фільм жахів"
     },
     {
-        "value": 18,
+        "value": "18",
         "label": "Мультфільм"
     },
     {
-        "value": 19,
+        "value": "19",
         "label": "Сімейний"
     },
     {
-        "value": 20,
+        "value": "20",
         "label": "Мюзикл"
     },
     {
-        "value": 21,
+        "value": "21",
         "label": "Спорт"
     },
     {
-        "value": 22,
+        "value": "22",
         "label": "Документальний"
     },
     {
-        "value": 23,
+        "value": "23",
         "label": "Короткометражка"
     },
     {
-        "value": 24,
+        "value": "24",
         "label": "Аніме"
     },
     {
-        "value": 26,
+        "value": "26",
         "label": "Новини"
     },
     {
-        "value": 27,
+        "value": "27",
         "label": "Концерт"
     },
     {
-        "value": 28,
+        "value": "28",
         "label": "Для дорослих"
     },
     {
-        "value": 29,
+        "value": "29",
         "label": "Церемонія"
     },
     {
-        "value": 30,
+        "value": "30",
         "label": "Реальне ТБ"
     },
     {
-        "value": 31,
+        "value": "31",
         "label": "Гра"
     },
     {
-        "value": 32,
+        "value": "32",
         "label": "Ток-шоу"
     },
     {
-        "value": 33,
+        "value": "33",
         "label": "Для дітей"
     }
 ]

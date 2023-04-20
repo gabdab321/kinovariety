@@ -10,13 +10,17 @@ describe('Select', () => {
         { label: 'Option 3', value: '3' },
     ];
 
+    const onChange = (value: string) => {
+        console.log(value)
+    }
+
     test('renders without crashing', () => {
-        render(<Select options={options} />);
+        render(<Select onChange={onChange} options={options} />);
     });
 
     test("renders all options", () => {
-        render(<Select options={options}/>)
-        const button = screen.getByTestId("1")
+        render(<Select onChange={onChange} options={options}/>)
+        const button = screen.getByTestId("button")
         fireEvent.click(button)
 
         const option1 = screen.getByText("Option 1")
@@ -29,8 +33,8 @@ describe('Select', () => {
     })
 
     test("renders default option", () => {
-        render(<Select options={options} defaultOption={{value: "4", label: "Default option"}}/>)
-        const button = screen.getByTestId("1")
+        render(<Select onChange={onChange} options={options} defaultOption={{value: "4", label: "Default option"}}/>)
+        const button = screen.getByTestId("button")
         fireEvent.click(button)
 
         const defaultOption = screen.getAllByText("Default option")[1]
@@ -39,7 +43,7 @@ describe('Select', () => {
     })
 
     test("properly selects option", () => {
-        render(<Select options={options} />)
+        render(<Select onChange={onChange} options={options} />)
         const button = screen.getByTestId("button")
         fireEvent.click(button)
 
@@ -51,7 +55,7 @@ describe('Select', () => {
     })
 
     test("closes on blur", () => {
-        render(<Select options={options} />)
+        render(<Select onChange={onChange} options={options} />)
         const button = screen.getByTestId("button")
         fireEvent.click(button)
 

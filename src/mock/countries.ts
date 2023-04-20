@@ -1,5 +1,5 @@
 interface country {
-    value: number,
+    value: string,
     label: string
 }
 
@@ -9,919 +9,919 @@ interface country {
 
 export const countries: country[] = [
     {
-        "value": 106,
+        "value": "106",
         "label": "Україна "
     },
     {
-        "value": 1,
+        "value": "1",
         "label": "США"
     },
     {
-        "value": 2,
+        "value": "2",
         "label": "Швейцарія"
     },
     {
-        "value": 3,
+        "value": "3",
         "label": "Франція"
     },
     {
-        "value": 4,
+        "value": "4",
         "label": "Польща"
     },
     {
-        "value": 5,
+        "value": "5",
         "label": "Великобританія"
     },
     {
-        "value": 6,
+        "value": "6",
         "label": "Швеція"
     },
     {
-        "value": 7,
+        "value": "7",
         "label": "Індія"
     },
     {
-        "value": 8,
+        "value": "8",
         "label": "Іспанія"
     },
     {
-        "value": 9,
+        "value": "9",
         "label": "Німеччина"
     },
     {
-        "value": 10,
+        "value": "10",
         "label": "Італія"
     },
     {
-        "value": 11,
+        "value": "11",
         "label": "Гонконг"
     },
     {
-        "value": 12,
+        "value": "12",
         "label": "Німеччина (ФРН)"
     },
     {
-        "value": 13,
+        "value": "13",
         "label": "Австралія "
     },
     {
-        "value": 14,
+        "value": "14",
         "label": "Канада "
     },
     {
-        "value": 15,
+        "value": "15",
         "label": "Мексика "
     },
     {
-        "value": 16,
+        "value": "16",
         "label": "Японія "
     },
     {
-        "value": 17,
+        "value": "17",
         "label": "Данія "
     },
     {
-        "value": 18,
+        "value": "18",
         "label": "Чехія "
     },
     {
-        "value": 19,
+        "value": "19",
         "label": "Ірландія "
     },
     {
-        "value": 20,
+        "value": "20",
         "label": "Люксембург "
     },
     {
-        "value": 21,
+        "value": "21",
         "label": "Китай "
     },
     {
-        "value": 22,
+        "value": "22",
         "label": "Норвегія "
     },
     {
-        "value": 23,
+        "value": "23",
         "label": "Нідерланди "
     },
     {
-        "value": 24,
+        "value": "24",
         "label": "Аргентина "
     },
     {
-        "value": 25,
+        "value": "25",
         "label": "Фінляндія "
     },
     {
-        "value": 26,
+        "value": "26",
         "label": "Боснія і Герцеговина"
     },
     {
-        "value": 27,
+        "value": "27",
         "label": "Австрія"
     },
     {
-        "value": 28,
+        "value": "28",
         "label": "Тайвань"
     },
     {
-        "value": 29,
+        "value": "29",
         "label": "Нова Зеландія"
     },
     {
-        "value": 30,
+        "value": "30",
         "label": "Бразилія"
     },
     {
-        "value": 31,
+        "value": "31",
         "label": "Чехословаччина"
     },
     {
-        "value": 32,
+        "value": "32",
         "label": "Мальта"
     },
     {
-        "value": 33,
+        "value": "33",
         "label": "СРСР"
     },
     {
-        "value": 35,
+        "value": "35",
         "label": "Югославія"
     },
     {
-        "value": 36,
+        "value": "36",
         "label": "Португалія"
     },
     {
-        "value": 37,
+        "value": "37",
         "label": "Румунія"
     },
     {
-        "value": 38,
+        "value": "38",
         "label": "Хорватія"
     },
     {
-        "value": 39,
+        "value": "39",
         "label": "ПАР"
     },
     {
-        "value": 40,
+        "value": "40",
         "label": "Куба"
     },
     {
-        "value": 41,
+        "value": "41",
         "label": "Колумбія"
     },
     {
-        "value": 42,
+        "value": "42",
         "label": "Ізраїль"
     },
     {
-        "value": 43,
+        "value": "43",
         "label": "Намібія"
     },
     {
-        "value": 44,
+        "value": "44",
         "label": "Туреччина"
     },
     {
-        "value": 45,
+        "value": "45",
         "label": "Бельгія"
     },
     {
-        "value": 46,
+        "value": "46",
         "label": "Сальвадор"
     },
     {
-        "value": 47,
+        "value": "47",
         "label": "Ісландія"
     },
     {
-        "value": 48,
+        "value": "48",
         "label": "Угорщина"
     },
     {
-        "value": 49,
+        "value": "49",
         "label": "Корея Південна "
     },
     {
-        "value": 50,
+        "value": "50",
         "label": "Ліхтенштейн"
     },
     {
-        "value": 51,
+        "value": "51",
         "label": "Болгарія"
     },
     {
-        "value": 52,
+        "value": "52",
         "label": "Філіппіни"
     },
     {
-        "value": 53,
+        "value": "53",
         "label": "Домінікану"
     },
     {
-        "value": 55,
+        "value": "55",
         "label": "Марокко"
     },
     {
-        "value": 56,
+        "value": "56",
         "label": "Таїланд"
     },
     {
-        "value": 57,
+        "value": "57",
         "label": "Кенія"
     },
     {
-        "value": 58,
+        "value": "58",
         "label": "Пакистан"
     },
     {
-        "value": 59,
+        "value": "59",
         "label": "Іран"
     },
     {
-        "value": 60,
+        "value": "60",
         "label": "Панама"
     },
     {
-        "value": 61,
+        "value": "61",
         "label": "Аруба"
     },
     {
-        "value": 62,
+        "value": "62",
         "label": "Ямайка "
     },
     {
-        "value": 63,
+        "value": "63",
         "label": "Греція "
     },
     {
-        "value": 64,
+        "value": "64",
         "label": "Туніс "
     },
     {
-        "value": 65,
+        "value": "65",
         "label": "Киргизстан "
     },
     {
-        "value": 66,
+        "value": "66",
         "label": "Пуерто Ріко "
     },
     {
-        "value": 67,
+        "value": "67",
         "label": "Казахстан "
     },
     {
-        "value": 68,
+        "value": "68",
         "label": "Югославія (ФР) "
     },
     {
-        "value": 69,
+        "value": "69",
         "label": "Алжир "
     },
     {
-        "value": 70,
+        "value": "70",
         "label": "Німеччина (НДР) "
     },
     {
-        "value": 71,
+        "value": "71",
         "label": "Сінгапур "
     },
     {
-        "value": 72,
+        "value": "72",
         "label": "Словаччина "
     },
     {
-        "value": 73,
+        "value": "73",
         "label": "Афганістан "
     },
     {
-        "value": 74,
+        "value": "74",
         "label": "Індонезія "
     },
     {
-        "value": 75,
+        "value": "75",
         "label": "Перу "
     },
     {
-        "value": 76,
+        "value": "76",
         "label": "Бермуди "
     },
     {
-        "value": 77,
+        "value": "77",
         "label": "Монако "
     },
     {
-        "value": 78,
+        "value": "78",
         "label": "Зімбабве "
     },
     {
-        "value": 79,
+        "value": "79",
         "label": "В'єтнам "
     },
     {
-        "value": 80,
+        "value": "80",
         "label": "Ант ільські Острови"
     },
     {
-        "value": 81,
+        "value": "81",
         "label": "Саудівська Аравія"
     },
     {
-        "value": 82,
+        "value": "82",
         "label": "Танзанія"
     },
     {
-        "value": 83,
+        "value": "83",
         "label": "Лівія"
     },
     {
-        "value": 84,
+        "value": "84",
         "label": "Ліван"
     },
     {
-        "value": 85,
+        "value": "85",
         "label": "Кувейт"
     },
     {
-        "value": 86,
+        "value": "86",
         "label": "Єгипет"
     },
     {
-        "value": 87,
+        "value": "87",
         "label": "Литва"
     },
     {
-        "value": 88,
+        "value": "88",
         "label": "Венесуела"
     },
     {
-        "value": 89,
+        "value": "89",
         "label": "Словенія"
     },
     {
-        "value": 90,
+        "value": "90",
         "label": "Чилі"
     },
     {
-        "value": 91,
+        "value": "91",
         "label": "Багами"
     },
     {
-        "value": 92,
+        "value": "92",
         "label": "Еквадор"
     },
     {
-        "value": 93,
+        "value": "93",
         "label": "Коста-Ріка"
     },
     {
-        "value": 94,
+        "value": "94",
         "label": "Кіпр"
     },
     {
-        "value": 95,
+        "value": "95",
         "label": "Уругвай"
     },
     {
-        "value": 96,
+        "value": "96",
         "label": "Ірак"
     },
     {
-        "value": 97,
+        "value": "97",
         "label": "Мартініка"
     },
     {
-        "value": 98,
+        "value": "98",
         "label": "Естонія"
     },
     {
-        "value": 99,
+        "value": "99",
         "label": "ОАЕ"
     },
     {
-        "value": 100,
+        "value": "100",
         "label": "Бангладеш"
     },
     {
-        "value": 101,
+        "value": "101",
         "label": "Македонія"
     },
     {
-        "value": 102,
+        "value": "102",
         "label": "Гвінея"
     },
     {
-        "value": 103,
+        "value": "103",
         "label": "Йорданія"
     },
     {
-        "value": 104,
+        "value": "104",
         "label": "Латвія "
     },
     {
-        "value": 105,
+        "value": "105",
         "label": "Вірменія "
     },
     {
-        "value": 107,
+        "value": "107",
         "label": "Сирія "
     },
     {
-        "value": 108,
+        "value": "108",
         "label": "Шрі-Ланка "
     },
     {
-        "value": 109,
+        "value": "109",
         "label": "Нігерія "
     },
     {
-        "value": 110,
+        "value": "110",
         "label": "Берег Слонової кістки "
     },
     {
-        "value": 111,
+        "value": "111",
         "label": "Грузія "
     },
     {
-        "value": 112,
+        "value": "112",
         "label": "Сенегал "
     },
     {
-        "value": 113,
+        "value": "113",
         "label": "Монголія "
     },
     {
-        "value": 114,
+        "value": "114",
         "label": "Габон "
     },
     {
-        "value": 115,
+        "value": "115",
         "label": "Замбія "
     },
     {
-        "value": 116,
+        "value": "116",
         "label": "Албанія"
     },
     {
-        "value": 117,
+        "value": "117",
         "label": "Камерун"
     },
     {
-        "value": 118,
+        "value": "118",
         "label": "Буркіна-Фасо"
     },
     {
-        "value": 119,
+        "value": "119",
         "label": "Узбекистан"
     },
     {
-        "value": 120,
+        "value": "120",
         "label": "Малайзія"
     },
     {
-        "value": 121,
+        "value": "121",
         "label": "Сербія"
     },
     {
-        "value": 122,
+        "value": "122",
         "label": "Гана"
     },
     {
-        "value": 123,
+        "value": "123",
         "label": "Таджикистан"
     },
     {
-        "value": 124,
+        "value": "124",
         "label": "Гаїті"
     },
     {
-        "value": 125,
+        "value": "125",
         "label": "Конго (ДРК)"
     },
     {
-        "value": 128,
+        "value": "128",
         "label": "Білорусь "
     },
     {
-        "value": 129,
+        "value": "129",
         "label": "Молдова "
     },
     {
-        "value": 130,
+        "value": "130",
         "label": "Азербайджан "
     },
     {
-        "value": 131,
+        "value": "131",
         "label": "Палестина "
     },
     {
-        "value": 132,
+        "value": "132",
         "label": "Окупована Палестинська територія "
     },
     {
-        "value": 133,
+        "value": "133",
         "label": "Корея Північна "
     },
     {
-        "value": 134,
+        "value": "134",
         "label": "Нікарагуа "
     },
     {
-        "value": 135,
+        "value": "135",
         "label": "Камбоджа "
     },
     {
-        "value": 136,
+        "value": "136",
         "label": "Ангола "
     },
     {
-        "value": 137,
+        "value": "137",
         "label": "Сербія і Чорногорія "
     },
     {
-        "value": 138,
+        "value": "138",
         "label": "Непал "
     },
     {
-        "value": 139,
+        "value": "139",
         "label": "Бенін "
     },
     {
-        "value": 140,
+        "value": "140",
         "label": "Гваделупа "
     },
     {
-        "value": 141,
+        "value": "141",
         "label": "Гренландія "
     },
     {
-        "value": 142,
+        "value": "142",
         "label": "Гвінея-Бісау "
     },
     {
-        "value": 143,
+        "value": "143",
         "label": "Макао "
     },
     {
-        "value": 144,
+        "value": "144",
         "label": "Парагвай "
     },
     {
-        "value": 145,
+        "value": "145",
         "label": "Мавританія "
     },
     {
-        "value": 146,
+        "value": "146",
         "label": "Руанда "
     },
     {
-        "value": 148,
+        "value": "148",
         "label": "Кот-д'Івуар"
     },
     {
-        "value": 149,
+        "value": "149",
         "label": "Гібралтар"
     },
     {
-        "value": 150,
+        "value": "150",
         "label": "Ботсвана"
     },
     {
-        "value": 151,
+        "value": "151",
         "label": "Болівія"
     },
     {
-        "value": 152,
+        "value": "152",
         "label": "Мадагаскар"
     },
     {
-        "value": 153,
+        "value": "153",
         "label": "Кабо-Верде"
     },
     {
-        "value": 154,
+        "value": "154",
         "label": "Чад"
     },
     {
-        "value": 155,
+        "value": "155",
         "label": "Малі"
     },
     {
-        "value": 156,
+        "value": "156",
         "label": "Фіджі"
     },
     {
-        "value": 157,
+        "value": "157",
         "label": "Бутан"
     },
     {
-        "value": 158,
+        "value": "158",
         "label": "Барбадос "
     },
     {
-        "value": 159,
+        "value": "159",
         "label": "Трінідад і Тобаго"
     },
     {
-        "value": 160,
+        "value": "160",
         "label": "Мозамбік"
     },
     {
-        "value": 161,
+        "value": "161",
         "label": "Заїр"
     },
     {
-        "value": 162,
+        "value": "162",
         "label": "Андорра"
     },
     {
-        "value": 163,
+        "value": "163",
         "label": "Туркменістан"
     },
     {
-        "value": 164,
+        "value": "164",
         "label": "Гайана"
     },
     {
-        "value": 165,
+        "value": "165",
         "label": "Корея"
     },
     {
-        "value": 166,
+        "value": "166",
         "label": "Нігер"
     },
     {
-        "value": 167,
+        "value": "167",
         "label": "Конго"
     },
     {
-        "value": 168,
+        "value": "168",
         "label": "Того"
     },
     {
-        "value": 169,
+        "value": "169",
         "label": "Ватикан"
     },
     {
-        "value": 171,
+        "value": "171",
         "label": "Бурунді"
     },
     {
-        "value": 172,
+        "value": "172",
         "label": "Папуа - Нова Гвінея"
     },
     {
-        "value": 173,
+        "value": "173",
         "label": "Бахрейн"
     },
     {
-        "value": 174,
+        "value": "174",
         "label": "Гондурас"
     },
     {
-        "value": 175,
+        "value": "175",
         "label": "Судан"
     },
     {
-        "value": 176,
+        "value": "176",
         "label": "Ефіопія"
     },
     {
-        "value": 177,
+        "value": "177",
         "label": "Ємен"
     },
     {
-        "value": 178,
+        "value": "178",
         "label": "В'єтнам Північний"
     },
     {
-        "value": 179,
+        "value": "179",
         "label": "Сурінам"
     },
     {
-        "value": 180,
+        "value": "180",
         "label": "Маврикій"
     },
     {
-        "value": 182,
+        "value": "182",
         "label": "Ліберія "
     },
     {
-        "value": 183,
+        "value": "183",
         "label": "Лесото "
     },
     {
-        "value": 184,
+        "value": "184",
         "label": "Уганда "
     },
     {
-        "value": 185,
+        "value": "185",
         "label": "Кайманові острови "
     },
     {
-        "value": 186,
+        "value": "186",
         "label": "Антигуа і Барбуда "
     },
     {
-        "value": 187,
+        "value": "187",
         "label": "Західна Сахара "
     },
     {
-        "value": 188,
+        "value": "188",
         "label": "Сан-Марино "
     },
     {
-        "value": 189,
+        "value": "189",
         "label": "Гуам "
     },
     {
-        "value": 190,
+        "value": "190",
         "label": "Косово "
     },
     {
-        "value": 191,
+        "value": "191",
         "label": "Лаос "
     },
     {
-        "value": 192,
+        "value": "192",
         "label": "Катар "
     },
     {
-        "value": 193,
+        "value": "193",
         "label": "Оман "
     },
     {
-        "value": 194,
+        "value": "194",
         "label": "Американські Віргінські острови "
     },
     {
-        "value": 195,
+        "value": "195",
         "label": "Сіам "
     },
     {
-        "value": 196,
+        "value": "196",
         "label": "Сьєрра-Леоне "
     },
     {
-        "value": 197,
+        "value": "197",
         "label": "Еритрея "
     },
     {
-        "value": 198,
+        "value": "198",
         "label": "Сомалі "
     },
     {
-        "value": 199,
+        "value": "199",
         "label": "Домініка "
     },
     {
-        "value": 200,
+        "value": "200",
         "label": "Бірма "
     },
     {
-        "value": 201,
+        "value": "201",
         "label": "Реюньйон "
     },
     {
-        "value": 202,
+        "value": "202",
         "label": "Федеративні Штати Мікронезії "
     },
     {
-        "value": 204,
+        "value": "204",
         "label": "Ам ериканське Самоа "
     },
     {
-        "value": 205,
+        "value": "205",
         "label": "Свазіленд "
     },
     {
-        "value": 206,
+        "value": "206",
         "label": "Французька Полінезія "
     },
     {
-        "value": 207,
+        "value": "207",
         "label": "М'янма "
     },
     {
-        "value": 208,
+        "value": "208",
         "label": "Нова Каледонія "
     },
     {
-        "value": 209,
+        "value": "209",
         "label": "Французька Гвіана "
     },
     {
-        "value": 210,
+        "value": "210",
         "label": "Сент-Вінсент і Гренадини "
     },
     {
-        "value": 211,
+        "value": "211",
         "label": "Малаві "
     },
     {
-        "value": 215,
+        "value": "215",
         "label": "Тувалу"
     },
     {
-        "value": 216,
+        "value": "216",
         "label": "Тимор-Лесте"
     },
     {
-        "value": 217,
+        "value": "217",
         "label": "ЦАР"
     },
     {
-        "value": 218,
+        "value": "218",
         "label": "Тонга"
     },
     {
-        "value": 219,
+        "value": "219",
         "label": "Гренада"
     },
     {
-        "value": 220,
+        "value": "220",
         "label": "Гамбія"
     },
     {
-        "value": 221,
+        "value": "221",
         "label": "Антарктида"
     },
     {
-        "value": 222,
+        "value": "222",
         "label": "Острови Кука"
     },
     {
-        "value": 223,
+        "value": "223",
         "label": "Острів Мен"
     },
     {
-        "value": 226,
+        "value": "226",
         "label": "Маршаллові острови "
     },
     {
-        "value": 227,
+        "value": "227",
         "label": "Бруней-Даруссалам "
     },
     {
-        "value": 228,
+        "value": "228",
         "label": "Сейшельські острови "
     },
     {
-        "value": 229,
+        "value": "229",
         "label": "Палау "
     },
     {
-        "value": 230,
+        "value": "230",
         "label": "Сент-Люсія "
     },
     {
-        "value": 231,
+        "value": "231",
         "label": "Вануату "
     },
     {
-        "value": 232,
+        "value": "232",
         "label": "Мальдіви "
     },
     {
-        "value": 233,
+        "value": "233",
         "label": "Боснія "
     },
     {
-        "value": 236,
+        "value": "236",
         "label": "Киргизія "
     },
     {
-        "value": 239,
+        "value": "239",
         "label": "Джибуті "
     },
     {
-        "value": 240,
+        "value": "240",
         "label": "Віргінські острови (США) "
     },
     {
-        "value": 241,
+        "value": "241",
         "label": "Північна Македонія "
     },
     {
-        "value": 242,
+        "value": "242",
         "label": "Віргінські острови (Великобританія) "
     },
     {
-        "value": 3545269,
+        "value": "3545269",
         "label": "Сент-Люсія "
     },
     {
-        "value": 7801402,
+        "value": "7801402",
         "label": "Фолклендськіострови "
     },
     {
-        "value": 10842163,
+        "value": "10842163",
         "label": "Острів Святої Олени "
     },
     {
-        "value": 32518739,
+        "value": "32518739",
         "label": "острови Теркс і Кайкос "
     }
 ]

@@ -4,20 +4,22 @@ import {findLabel} from "../../../utils/findLabel/findLabel";
 import {Option} from "../../../utils/findLabel/findLabel";
 
 export interface SelectProps {
+    onChange:  (value: string) => void
     options: Option[];
     defaultOption?: Option
 }
 
 /**
  * UI select component that displays a dropdown menu with options to choose from.
+ * @param onChange - Event handler that works on click to the option.
  * @param {Option[]} options - An array of options to choose from. Each option should have a value and label property.
  * @param {Option} [defaultOption] - An optional default option to be displayed when no option is selected.
  * @returns {JSX.Element} A React component that renders the custom select.
  */
 
-function Select({ options, defaultOption }: SelectProps): JSX.Element {
+function Select({ onChange, options, defaultOption }: SelectProps): JSX.Element {
     /* contains value of currently selected option */
-    const [selectedValue, setSelectedValue] = useState<string | number>(defaultOption ? defaultOption.value : "");
+    const [selectedValue, setSelectedValue] = useState<string>(defaultOption ? defaultOption.value : "");
     /* state that is responsible for dropdown menu visibility */
     const [isOpen, setIsOpen] = useState<boolean>(false);
     /* already filtered options. by default it is equal to options prop */
@@ -31,7 +33,10 @@ function Select({ options, defaultOption }: SelectProps): JSX.Element {
     }
 
     /* Handle a click on an option. Sets selectedValue state */
-    function handleClick(value: string | number): void {
+    function handleClick(value: string): void {
+        /* Invokes onChange handler function with value param */
+        onChange(value)
+        /* Changes selected option value in component */
         setSelectedValue(value)
     }
 
