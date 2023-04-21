@@ -15,7 +15,9 @@ interface FilterProps {
 const defaultOption = {value: "", label: "Усі"}
 
 /**
- * Component to set the filter parameters.
+ * Filter component that allows the user to filter a list of movies based on different criteria such as country,
+ * genre, year, and rating. The component consists of a button that toggles the visibility of the filter options,
+ * and a form that includes select inputs for country and genre, and range sliders for year and rating.
  * @param {setFilter} - function to dispatch filter parameters.
  * @returns {JSX.Element} A React component that renders the filter.
  */
@@ -60,22 +62,23 @@ const Filter = ({setFilter}: FilterProps): JSX.Element => {
         <>
             {/* responsible for changing visibility of filter */}
             <button
+                data-testid="btn-toggle"
                 style={{marginBottom: "16px"}}
                 onClick={toggleVisibility}
                 className={cl.filter__button}
             >{visible ? "Сховати фільтр" : "Показати фільтр"}</button>
 
             {/* filter */}
-            <div style={{display: visible ? "" : "none"}} className={cl.filter}>
+            <div data-testid="filter" style={{display: visible ? "" : "none"}} className={cl.filter}>
 
                 <div className={cl.filter__select_container}>
                     {/* select that responsible for changing country param */}
                     <p className={cl.filter__label}>Країна виробник:</p>
-                    <Select onChange={handleCountryChange} options={countries} defaultOption={defaultOption} />
+                    <Select data-testid="country" onChange={handleCountryChange} options={countries} defaultOption={defaultOption} />
 
                     {/* select that responsible for changing genre param */}
                     <p className={cl.filter__label}>Жанри:</p>
-                    <Select onChange={handleGenreChange} options={genres} defaultOption={defaultOption} />
+                    <Select data-testid="genre" onChange={handleGenreChange} options={genres} defaultOption={defaultOption} />
                 </div>
 
                 <p className={cl.filter__slider_label}>Роки: </p>
@@ -87,7 +90,7 @@ const Filter = ({setFilter}: FilterProps): JSX.Element => {
                 <Slider onChange={handleChangeRating} value={[newFilter.ratingFrom, newFilter.ratingTo]} min={0} max={10}/>
 
                 {/* this button is responsible for applying changes to the parent component */}
-                <button onClick={applyChanges} style={{marginTop: "50px"}} className={cl.filter__button}>Застосувати</button>
+                <button data-testid="btn-apply" onClick={applyChanges} style={{marginTop: "50px"}} className={cl.filter__button}>Застосувати</button>
             </div>
         </>
     );
