@@ -6,17 +6,17 @@ import {Link} from "react-router-dom";
 import * as FaIcons from "react-icons/fa";
 import SidebarItems from "../SidebarItems/SidebarItems";
 
-/*
-    Navbar component is responsible for search and open sidebar functions. It does not has complicated logic, only
-    simple state that describes sidebar visibility and handler functions for it.
-*/
+/**
+ * Responsible for search and sidebar. Rendered on every page of the whole app
+ * @returns {JSX.Element} - Navbar component*/
 
 const Navbar = () => {
-    // state that is responsible for sidebar visibility
+    /* responsible for visibility of the sidebar */
     const [sidebar, setSidebar] = useState(false);
 
-    // this functions is designed to show and hide sidebar(changing sidebar state)
-    const showSidebar = () => setSidebar(true);
+    /* shows sidebar */
+    const showSidebar = () => setSidebar(true)
+    /* closes sidebar */
     const closeSidebar = () => setSidebar(false)
 
     return (

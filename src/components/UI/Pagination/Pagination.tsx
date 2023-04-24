@@ -8,6 +8,12 @@ interface PaginationProps {
     onPageChange: (current: { selected: number }) => void
 }
 
+/**
+ * UI component that renders functional pagination bar. Uses react-paginate library component.
+ * @param onPageChange - event handler that do something when page is changed
+ * @param pageCount - total amount of pages.
+ * @param selectedPage - user`s selected page */
+
 const Pagination = ({onPageChange, pageCount, selectedPage}: PaginationProps) => {
     return (
         <ReactPaginate

@@ -7,6 +7,11 @@ interface PageListProps {
     films: IFilmShort[]
 }
 
+/**
+ * List of the PageListItems
+ * @param films {IFilmShort} - array of the IFilmShort objects.
+ * @returns JSX.Element - List of the films */
+
 const PageList = ({films}: PageListProps) => {
     return (
         <div className={cl.list}>

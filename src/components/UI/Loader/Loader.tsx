@@ -5,6 +5,10 @@ interface LoaderProps {
     style? : Object
 }
 
+/**
+ * UI component that renders loader.
+ * @param [style] - optional additional styles
+ * @returns JSX.Element - Loader */
 
 const Loader = ({style}: LoaderProps) => {
     return (

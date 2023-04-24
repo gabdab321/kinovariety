@@ -9,7 +9,13 @@ interface FilmPageItemProps {
     film: IFilmFull
 }
 
+/**
+ * Renders full information about film. used on film and series pages
+ * @param film {IFilmFull} - object that contains full data about the film
+ * @returns JSX.Element - Full description of film */
+
 const FilmPageItem = ({film}: FilmPageItemProps) => {
+    /* asynchronous request that gets seasons data. used to render information about series  */
     const {data} = filmAPI.useGetSeasonsQuery(film.kinopoiskId)
 
     return (

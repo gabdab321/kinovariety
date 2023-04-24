@@ -11,6 +11,14 @@ interface PosterListProps {
     styles?: object
 }
 
+/**
+ * Films list with short information. It can be best films of genre or best films of the country, etc.
+ * @param films {IFilmShort[]} - array of films to render.
+ * @param title - list title
+ * @param [url] - optional url for the "more..." button, by the default equal to ""
+ * @param styles - additional styles
+ * @returns JSX.Element - titled list of the films and optional "more..." button */
+
 const PosterList = ({films, title, url = "", styles}: PosterListProps) => {
     return (
         <div style={styles} className={cl.list}>

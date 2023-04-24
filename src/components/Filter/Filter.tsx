@@ -1,4 +1,4 @@
-import React, {Dispatch, useState} from 'react';
+import React, {Dispatch, useCallback, useState} from 'react';
 import Slider from "../UI/Slider/Slider";
 import {countries} from "../../mock/countries";
 import cl from "./Filter.module.scss"
@@ -43,34 +43,44 @@ const Filter = ({setFilter}: FilterProps): JSX.Element => {
     }
 
     /* event handler for select component. sets country param to the newFilter object */
-    function handleCountryChange(value: string): void {
-        setNewFilter({...newFilter, country: value})
-    }
+    const handleCountryChange = useCallback((value: string) => {
+        setNewFilter((prevFilter) => ({ ...prevFilter, country: value }))
+    }, [])
+
 
     /* event handler for select component. sets genre param to the newFilter object */
-    function handleGenreChange(value: string): void {
-        setNewFilter({...newFilter, genre: value})
-    }
+    const handleGenreChange = useCallback((value: string) => {
+        setNewFilter((prevFilter) => ({ ...prevFilter, genre: value }))
+    }, [])
 
     /* event handler for select component. sets order param to the newFilter object */
-    function handleOrderChange(value: string): void {
-        setNewFilter({...newFilter, order: value as Order})
-    }
+    const handleOrderChange = useCallback((value: string) => {
+        setNewFilter((prevFilter) => ({ ...prevFilter, order: value as Order }))
+    }, [])
 
     /* event handler for slider component. sets yearsFrom and yearsTo params to the newFilter object */
-    function handleChangeYears(value: number[]): void{
-        setNewFilter({...newFilter, yearFrom: value[0], yearTo: value[1]})
-    }
+    const handleChangeYears = useCallback((value: number[]) => {
+        setNewFilter((prevFilter) => ({
+            ...prevFilter,
+            yearFrom: value[0],
+            yearTo: value[1],
+        }))
+    }, [])
 
     /* event handler for slider component. sets ratingFrom and ratingTo params to the newFilter object */
-    function handleChangeRating(value: number[]): void{
-        setNewFilter({...newFilter, ratingFrom: value[0], ratingTo: value[1]})
-    }
+    const handleChangeRating = useCallback((value: number[]) => {
+        setNewFilter((prevFilter) => ({
+            ...prevFilter,
+            ratingFrom: value[0],
+            ratingTo: value[1],
+        }))
+    }, [])
 
     /* dispatches newFilter to the parent component filter object */
-    function applyChanges(): void {
+    const applyChanges = useCallback(() => {
         setFilter(newFilter)
-    }
+    }, [newFilter, setFilter])
+
 
     return (
         <>
@@ -88,24 +98,47 @@ const Filter = ({setFilter}: FilterProps): JSX.Element => {
                 <div className={cl.filter__select_container}>
                     {/* select that responsible for changing country param */}
                     <p className={cl.filter__label}>Країна виробник:</p>
-                    <Select data-testid="country" onChange={handleCountryChange} options={countries} defaultOption={defaultOption} />
+                    <Select
+                        data-testid="country"
+                        onChange={handleCountryChange}
+                        options={countries} defaultOption={defaultOption}
+                    />
 
                     {/* select that responsible for changing genre param */}
                     <p className={cl.filter__label}>Жанри:</p>
-                    <Select data-testid="genre" onChange={handleGenreChange} options={genres} defaultOption={defaultOption} />
+                    <Select
+                        data-testid="genre"
+                        onChange={handleGenreChange}
+                        options={genres}
+                        defaultOption={defaultOption}
+                    />
                 </div>
 
                 <p className={cl.filter__slider_label}>Роки: </p>
                 {/* slider that responsible for changing yearFrom and yearTo params */}
-                <Slider onChange={handleChangeYears} value={[newFilter.yearFrom, newFilter.yearTo]} min={1900} max={new Date().getFullYear()}/>
+                <Slider
+                    onChange={handleChangeYears}
+                    value={[newFilter.yearFrom, newFilter.yearTo]}
+                    min={1900}
+                    max={new Date().getFullYear()}
+                />
 
                 <p style={{marginTop: "30px"}} className={cl.filter__slider_label}>Рейтинг: </p>
                 {/* slider that responsible for changing ratingFrom and ratingTo params */}
-                <Slider onChange={handleChangeRating} value={[newFilter.ratingFrom, newFilter.ratingTo]} min={0} max={10}/>
+                <Slider
+                    onChange={handleChangeRating}
+                    value={[newFilter.ratingFrom, newFilter.ratingTo]}
+                    min={0}
+                    max={10}
+                />
 
                 <p style={{marginTop: "30px"}} className={cl.filter__slider_label}>Сортувати за: </p>
                 {/* slider that responsible for changing order params */}
-                <Select onChange={handleOrderChange} options={orderOptions} defaultOption={orderDefaultOption} />
+                <Select
+                    onChange={handleOrderChange}
+                    options={orderOptions}
+                    defaultOption={orderDefaultOption}
+                />
 
                 {/* this button is responsible for applying changes to the parent component */}
                 <button data-testid="btn-apply" onClick={applyChanges} style={{marginTop: "50px"}} className={cl.filter__button}>Застосувати</button>

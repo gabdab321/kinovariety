@@ -8,9 +8,16 @@ interface PageListItemProps {
     film: IFilmShort
 }
 
+/**
+ * Banner that contains short description of films
+ * @param film {IFilmShort} - object with short description of the film
+ * @returns JSX.Element - Clickable film banner */
+
 const PageListItem = ({film}: PageListItemProps) => {
+    /* joins year and type film params into one string */
     const shortInformation = `${film.year}, ${formatCategory(film.type)}`
 
+    /* whole component is link that opens in the new tab. route of the link is dynamic and depends on films id  */
     return (
         <Link target="_blank" rel="noopener noreferrer" to={`/film/${film.kinopoiskId}`} className={cl.item}>
             <div className={cl.item__image_container}>
