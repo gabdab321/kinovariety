@@ -1,10 +1,9 @@
 import {IFilter} from "../models/IFilter";
+import {Order} from "../models/IFilter";
 
-/*
-    Exports object that contains default params for filter
-*/
-
+/* filter that has default filter params */
 export const defaultFilter: IFilter = {
+    order: Order.NUM_VOTE,
     page: 1,
     genre: "",
     country: "",

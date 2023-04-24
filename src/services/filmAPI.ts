@@ -51,7 +51,7 @@ export const filmAPI = createApi({
 
         getFilmsByFilter: build.query<IResponse, IFilter>({
             query: (filter) => ({
-                url: `/api/v2.2/films?type=FILM&order=NUM_VOTE&countries=${filter.country || ""}&genres=${filter.genre || ""}&ratingFrom=${filter.ratingFrom || 0}&ratingTo=${filter.ratingTo || 10}&yearFrom=${filter.yearFrom || 1960}&yearTo=${filter.yearTo || getCurrentYear()}&page=${filter.page || 1}`
+                url: `/api/v2.2/films?type=FILM&order=${filter.order}&countries=${filter.country || ""}&genres=${filter.genre || ""}&ratingFrom=${filter.ratingFrom || 0}&ratingTo=${filter.ratingTo || 10}&yearFrom=${filter.yearFrom || 1960}&yearTo=${filter.yearTo || getCurrentYear()}&page=${filter.page || 1}`
             })
         }),
 
