@@ -18,7 +18,7 @@ interface SidebarProps {
 
 const Sidebar = ({isOpen, onClose, children}: SidebarProps) => {
     return (
-        <nav className={isOpen ? [cl["nav-menu"], cl["active"]].join(" ") : cl["nav-menu"]}>
+        <nav data-testid="sidebar" className={isOpen ? [cl["nav-menu"], cl["active"]].join(" ") : cl["nav-menu"]}>
             <ul className={cl["nav-menu-items"]} onClick={onClose}>
                 <li className={cl['navbar-toggle']}>
                     <Link to='#' className={cl['menu-bars']}>

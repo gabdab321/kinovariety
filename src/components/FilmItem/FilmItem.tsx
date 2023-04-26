@@ -24,14 +24,14 @@ const FilmItem = ({film}: FilmItemProps) => {
         <Link target="_blank" rel="noopener noreferrer" to={`/film/${film.kinopoiskId || film.filmId}`} className={cl.item}>
             <div className={cl.item__image_container}>
                 {/* does not renders film rating if it has type "SIMILAR" */}
-                {film?.relationType === "SIMILAR" ? "" : <div className={cl.item__rating}>{film.ratingImdb}</div>}
+                {film?.relationType === "SIMILAR" ? "" : <div data-testid="rating" className={cl.item__rating}>{film.ratingImdb}</div>}
                 <img className={cl.item__image} src={film.posterUrlPreview} alt="" />
             </div>
 
-            <p className={cl.item__title}>{film.nameRu === null ? film.nameOriginal : film.nameRu}</p>
+            <p data-testid="title" className={cl.item__title}>{film.nameRu === null ? film.nameOriginal : film.nameRu}</p>
 
             {/* does not renders year and type of film if it has type "SIMILAR"  */}
-            {film?.relationType === "SIMILAR" ? "" : <p className={cl.item__short}>{shortInformation}</p>}
+            {film?.relationType === "SIMILAR" ? "" : <p data-testid="shortInformation" className={cl.item__short}>{shortInformation}</p>}
         </Link>
     );
 };

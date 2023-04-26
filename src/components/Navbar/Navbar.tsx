@@ -29,7 +29,7 @@ const Navbar = () => {
 
             <div className={cl["navbar"]}>
                 <Link to='#' className={cl["menu-bars"]}>
-                    <FaIcons.FaBars style={{ color: '#fff' }} onClick={showSidebar} />
+                    <FaIcons.FaBars data-testid="btn-open" style={{ color: '#fff' }} onClick={showSidebar} />
                 </Link>
             </div>
         </header>
