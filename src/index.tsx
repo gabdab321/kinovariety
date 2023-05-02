@@ -9,7 +9,7 @@ const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
-    <BrowserRouter>
+    <BrowserRouter basename="https://kinovariety.netlify.app/">
         <Provider store={store}>
             <App />
         </Provider>
